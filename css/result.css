@@ -1,0 +1,68 @@
+body{
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+hr.divider{
+  margin: 30px 0 15px 0;
+}
+footer .copyright{
+  margin:0 auto;
+}
+.row .rightContent{
+	min-height: 558px;
+	_height: 558px;
+}
+.row .leftList{
+	padding-top:20px; 
+	height: 600px;
+}
+.row .leftList li{
+	margin-bottom: 10px; 
+}
+
+.jibenzucheng{
+	margin-left: 100px;
+}
+.jibenzucheng button{
+	width:150px;
+	margin-right: 60px; 
+}
+.jiafenxuanxiang{
+	margin-left: 70px;
+}
+.jiafenxuanxiang button{
+	width:150px;
+	margin-right: 85px; 
+}
+.chengjigoucheng{
+	margin-bottom: 20px;
+}
+.chengjigoucheng div{
+	margin-top: 10px;
+	margin-right: 20px;
+}
+.chengjigoucheng div h4{
+	margin-bottom: 4px;
+}
+.chengjigoucheng li{
+	width: 106px;
+}
+.chengjigoucheng .qiehuanzongchengji{
+	width: 60px;
+}
+.chengjigoucheng li a p{
+	font-size: 16px;
+}
+.chengjigoucheng li a h4,.chengjigoucheng li a p{
+	text-align: center;
+}
+.cishugoucheng{
+	margin-bottom: 20px;
+}
+.cishugoucheng li{
+
+}
+.cishugoucheng li a p{
+	font-size: 16px;
+	text-align: center;
+}

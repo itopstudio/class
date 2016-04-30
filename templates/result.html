@@ -1,0 +1,920 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>教学过程管理系统 结果页面</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/result.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+          教学过程管理系统
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav col-xs-push-8">
+            <li><a href="index.html">建立<span class="sr-only">(current)</span></a></li>
+            <li><a href="execute.html">执行</a></li>
+            <li class="active"><a href="result.html">结果</a></li>
+            <li><a href="teacherHelp.html">使用说明</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right ">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">王老师 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">号码：019942</a></li>
+                <li><a href="#">级别：高级工程师</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">重新登陆</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 导航结束 -->
+    <div class="container" id="summary_container">
+      <!-- 标签页开始 -->
+      <div class="row">
+        <div class="col-md-3 panel panel-default leftList">
+          <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="#class1" aria-controls="class1" role="tab" data-toggle="tab">
+                <h4 class="list-group-item-heading">通信软件基础</h4>
+                <p class="list-group-item-text">通信工程专业卓越工程师班</p>
+                <p class="list-group-item-text">班级：01914 | 01,02</p>
+            </a></li>
+            <li role="presentation"><a href="#class2" aria-controls="class2" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件基础实训(1)</h4>
+              <p class="list-group-item-text">通信与信息类班</p>
+              <p class="list-group-item-text">班级：01014 | 10</p>
+            </a></li>
+            <li role="presentation"><a href="#class3" aria-controls="class3" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件基础实训(2)</h4>
+              <p class="list-group-item-text">通信学院IT精英班</p>
+              <p class="list-group-item-text">班级：01913 | 03</p>
+            </a></li>
+            <li role="presentation"><a href="#class4" aria-controls="class4" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件开发应用实训</h4>
+              <p class="list-group-item-text">信息工程班</p>
+              <p class="list-group-item-text">班级：01413 | 01</p>
+            </a></li>
+          </ul>
+        </div>
+        <div class="col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">您正在编辑：通信软件基础（通信工程专业卓越工程师班）班级：01914 | 01,02</div>
+            <div class="panel-body rightContent">
+              <div class="tab-content rightContentTab">
+                <div role="tabpanel" class="tab-pane active" id="class1">
+                  <div>
+                    <ul class="nav nav-tabs chengjigoucheng" role="tablist">
+                      <li role="presentation" class="active"><a href="#pingshizuoye" aria-controls="pingshizuoye" role="tab" data-toggle="tab" >
+                        <h4 class="list-group-item-heading">平时作业</h4>
+                        <p class="list-group-item-text">5%</p>
+                        <p class="list-group-item-text">4次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#dazuoye" aria-controls="dazhuoye" role="tab" data-toggle="tab" >
+                        <h4 class="list-group-item-heading">大作业</h4>
+                        <p class="list-group-item-text">15%</p>
+                        <p class="list-group-item-text">2次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#dabian" aria-controls="dabian" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">答辩</h4>
+                        <p class="list-group-item-text">20%</p>
+                        <p class="list-group-item-text">2次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#kaoqin" aria-controls="kaoqin" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">考勤</h4>
+                        <p class="list-group-item-text">20%</p>
+                        <p class="list-group-item-text">4次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#banqikaoshi" aria-controls="banqikaoshi" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">半期考试</h4>
+                        <p class="list-group-item-text">20%</p>
+                        <p class="list-group-item-text">2次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#qimokaoshi" aria-controls="qimokaoshi" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">期末考试</h4>
+                        <p class="list-group-item-text">20%</p>
+                        <p class="list-group-item-text">1次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#kechengjiafen" aria-controls="kechengjiafen" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">课程加分</h4>
+                        <p class="list-group-item-text">上限:10分</p>
+                        <p class="list-group-item-text">1次</p>
+                      </a></li>
+                      <li role="presentation" class="qiehuanzongchengji"><a href="#zongchengji" aria-controls="zongchengji" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">总成绩</h4>
+                      </a></li>
+                    </ul>
+                    <div class="tab-content">
+                      <!-- 作业切换开始 -->
+                      <div role="tabpanel" class="tab-pane active" id="pingshizuoye">
+                        <table class="table table-bordered table-hover table-striped">
+                           <thead>
+                             <tr>
+                               <th>学生编号</th>
+                               <th>学生姓名</th>
+                               <th>第一次</th>
+                               <th>第二次</th>
+                               <th>第三次</th>
+                               <th>第四次</th>
+                               <th>平时作业</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>2011210045</td>
+                               <td>神一豪</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>60</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                           </tbody>
+                        </table>
+                      </div>
+                      <!-- 作业切换结束 -->
+                      <div role="tabpanel" class="tab-pane" id="dazuoye">
+                        <table class="table table-bordered table-hover table-striped">
+                           <thead>
+                             <tr>
+                               <th>学生编号</th>
+                               <th>学生姓名</th>
+                               <th>第一次</th>
+                               <th>第二次</th>
+                               <th>大作业</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>2011210045</td>
+                               <td>神一豪</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                           </tbody>
+                        </table>
+                      </div>
+                      <!-- 答辩切换开始 -->
+                      <div role="tabpanel" class="tab-pane" id="dabian">
+                        <table class="table table-bordered table-hover table-striped">
+                           <thead>
+                             <tr>
+                               <th>学生编号</th>
+                               <th>学生姓名</th>
+                               <th>第一次</th>
+                               <th>第二次</th>
+                               <th>答辩</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>2011210045</td>
+                               <td>神一豪</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                           </tbody>
+                        </table>
+                      </div>
+                      <!-- 答辩切换结束 -->
+                      <!-- 考勤切换开始 -->
+                      <div role="tabpanel" class="tab-pane" id="kaoqin">
+                        <table class="table table-bordered table-hover table-striped">
+                           <thead>
+                             <tr>
+                               <th>学生编号</th>
+                               <th>学生姓名</th>
+                               <th>第一次</th>
+                               <th>第二次</th>
+                               <th>第三次</th>
+                               <th>第四次</th>
+                               <th>考勤</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>2011210045</td>
+                               <td>神一豪</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>60</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                             </tr>
+                           </tbody>
+                        </table>
+                      </div>
+                      <!-- 考勤切换结束 -->
+                      <!-- 半期考试开始 -->
+                      <div role="tabpanel" class="tab-pane" id="banqikaoshi">
+                        <table class="table table-bordered table-hover table-striped">
+                           <thead>
+                             <tr>
+                               <th>学生编号</th>
+                               <th>学生姓名</th>
+                               <th>第一次</th>
+                               <th>第二次</th>
+                               <th>半期</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>2011210045</td>
+                               <td>神一豪</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>80</td>
+                             </tr>
+                           </tbody>
+                        </table>
+                      </div>
+                      <!-- 半期考试结束 -->
+                      <!-- 期末考试开始 -->
+                      <div role="tabpanel" class="tab-pane" id="qimokaoshi">
+                        <table class="table table-bordered table-hover table-striped">
+                           <thead>
+                             <tr>
+                               <th>学生编号</th>
+                               <th>学生姓名</th>
+                               <th>期末</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>2011210045</td>
+                               <td>神一豪</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                             </tr>
+                           </tbody>
+                        </table>
+                      </div>
+                      <!-- 期末考试结束 -->
+                      <!-- 课程加分开始 -->
+                      <div role="tabpanel" class="tab-pane" id="kechengjiafen">
+                        <table class="table table-bordered table-hover table-striped">
+                           <thead>
+                             <tr>
+                               <th>学生编号</th>
+                               <th>学生姓名</th>
+                               <th>上课举手积极</th>
+                               <th>课外涉及广泛</th>
+                               <th>小组谈论活跃</th>
+                               <th>行为礼貌带动氛围</th>
+                               <th>回答特殊问题</th>
+                               <th>加分</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>2011210045</td>
+                               <td>神一豪</td>
+                               <td>1</td>
+                               <td>2</td>
+                               <td>1</td>
+                               <td>2</td>
+                               <td>2</td>
+                               <td>8</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>1</td>
+                               <td>1</td>
+                               <td>1</td>
+                               <td>1</td>
+                               <td>1</td>
+                               <td>5</td>
+                             </tr>
+                           </tbody>
+                        </table>
+                      </div>
+                      <!-- 课程加分结束 -->
+                      <!-- 总成绩加分开始 -->
+                      <div role="tabpanel" class="tab-pane" id="zongchengji">
+                        <table class="table table-bordered table-hover table-striped">
+                           <thead>
+                             <tr>
+                               <th>学生编号</th>
+                               <th>学生姓名</th>
+                               <th>平时作业</th>
+                               <th>大作业</th>
+                               <th>答辩</th>
+                               <th>考勤</th>
+                               <th>半期</th>
+                               <th>期末</th>
+                               <th>加分</th>
+                               <th>总成绩</th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr>
+                               <td>2011210045</td>
+                               <td>神一豪</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>60</td>
+                               <td>80</td>
+                               <td>40</td>
+                               <td>60</td>
+                               <td>90</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                             <tr>
+                               <td>2011210046</td>
+                               <td>王豆豆</td>
+                               <td>80</td>
+                               <td>80</td>
+                               <td>70</td>
+                               <td>66</td>
+                               <td>80</td>
+                               <td>77</td>
+                               <td>60</td>
+                               <td>86</td>
+                             </tr>
+                           </tbody>
+                        </table>
+                      </div>
+                      <!-- 总成绩加分结束 -->
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class2">
+                  <div class="page-header">
+                    <h3>考核组成</h3>
+                  </div>
+                  <p>...</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class3">
+                  <div class="page-header">
+                    <h3>成绩录入</h3>
+                  </div>
+                  <p>...</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class4">
+                  <div class="page-header">
+                    <h3>答辩组织</h3>
+                  </div>
+                  <p>...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 标签页结束   -->
+      <!-- 尾部开始 -->
+      <hr class="divider">
+      <footer>
+      <p class="text-center">Copyright © 2016 Jelly_Wang All Rights Reserved</p>
+      </footer>
+    </div>
+    <!-- 网站介绍结束 -->
+    
+
+
+
+    
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/result.js"></script>
+  </body>
+</html>

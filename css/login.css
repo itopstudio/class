@@ -1,0 +1,43 @@
+body{
+  padding-top: 51px;
+  padding-bottom: 50px;
+}
+.carousel{
+  height: 450px;
+  background-color: #000;
+  margin-bottom: 30px;
+}
+.carousel .item{
+  height: 450px;
+  background-color: #000;
+}
+.carousel img{
+  width: 100%;//分辨率大的时候自己填满
+}
+.carousel-caption p{
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 1.8;
+}
+#summary_container .col-md-4{
+  text-align: center;
+}
+#summary_container .col-md-4 img{
+  width: 60px;
+  height: 60px;
+}
+#summary_container .col-md-4 p{
+  font-size: 16px;
+  color:#333;
+}
+#summary_container .col-md-4 a:link{
+  color:#333;
+  text-decoration: none;
+}
+hr.divider{
+  margin: 30px 0 15px 0;
+}
+footer .copyright{
+  margin:0 auto;
+}
+

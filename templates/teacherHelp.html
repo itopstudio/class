@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>教学过程管理系统 使用说明</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/teacherHelp.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+          教学过程管理系统
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav col-xs-push-8">
+            <li><a href="index.html">建立<span class="sr-only">(current)</span></a></li>
+            <li><a href="execute.html">执行</a></li>
+            <li><a href="result.html">结果</a></li>
+            <li  class="active"><a href="teacherHelp.html">使用说明</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right ">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">王老师 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">号码：019942</a></li>
+                <li><a href="#">级别：高级工程师</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">重新登陆</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 导航结束 -->
+    <div class="container" id="summary_container">
+      <!-- 标签页开始 -->
+      <div class="row">
+        <div class="col-md-3 panel panel-default leftList">
+          <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="#systemSurvey" aria-controls="systemSurvey" role="tab" data-toggle="tab">系统概述</a></li>
+            <li role="presentation"><a href="#testCheck" aria-controls="testCheck" role="tab" data-toggle="tab">考核组成</a></li>
+            <li role="presentation"><a href="#gradeInput" aria-controls="gradeInput" role="tab" data-toggle="tab">成绩录入</a></li>
+            <li role="presentation"><a href="#competitiveExamination" aria-controls="competitiveExamination" role="tab" data-toggle="tab">答辩组织</a></li>
+            <li role="presentation"><a href="#judgeBuild" aria-controls="judgeBuild" role="tab" data-toggle="tab">评审建立</a></li>
+          </ul>
+        </div>
+        <div class="col-md-9">
+          <div class="col-md-12 panel panel-default rightContent">
+            <div class="tab-content rightContentTab">
+              <div role="tabpanel" class="tab-pane active" id="systemSurvey">
+                <div class="page-header">
+                  <h3>系统概述</h3>
+                </div>
+                <p>本文主要介绍了课程过程管理系统的设计思路与实现过程，并展示了本系统的阶段性成果。针对本校实际情况，由于没有相应的软件或系统对课程实施过程中遇到的问题或需求给予解决和满足，且基于学生和老师的种种需求，我们设计并实现了本系统。其目的是针对某一门课程，在开学初就通过本系统设计并实现系统、科学的考核体系，老师可通过本系统修改考核体系，并对阶段性成绩（随堂测试、中期考试、某次实验课成绩等）进行录入和发布，同学即可以立即查询自己的成绩和排名等信息。通过此系统可大大提高教学的科学性和公平性，同时减少了老师的总工作量，方便了学生的学习生活。</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="testCheck">
+                <div class="page-header">
+                  <h3>考核组成</h3>
+                </div>
+                <p>通过本系统，老师可以对自己教授的多个课程进行不同的考核设计：基本组成分配课后作业、实训答辩、随堂测试、期末成绩等项的比重分配及各项执行次数。针对不同情况，实行各种加分政策。比如上课回答问题、提出好的创意等。</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="gradeInput">
+                <div class="page-header">
+                  <h3>成绩录入</h3>
+                </div>
+                <p>老师根据系统生成的Excel表录入成绩后通过保存提交到数据库，以后的各种查询就直接使用数据库内的数据。在录入成绩的同时，可根据实际情况更改某次作业的比重。通过系统，老师在线发布作业并对作业做出说明（作业发布时间及提交截止时间、作业内容、特殊说明等）</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="competitiveExamination">
+                <div class="page-header">
+                  <h3>答辩组织</h3>
+                </div>
+                <p>实训课中，老师通过系统制定题目并对题目做出说明（题目内容、答辩时间等）。老师结合同学意愿进行分组（抽签、随机、自由组合、指定）并记录，同时以不同的方式（抽签、随机、自由组合、指定）为各个小组分配题目。</p>
+              </div>
+              <div role="tabpanel" class="tab-pane" id="judgeBuild">
+                <div class="page-header">
+                  <h3>评审建立</h3>
+                </div>
+                <p>老师指定按照单个评审员或组建评审团的方式对各个小组的答辩进行打分。如果组建品审团则选择并记录由哪些老师和学生组成品审团，以保证打分的客观性和公平性。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 标签页结束   -->
+      <!-- 尾部开始 -->
+      <hr class="divider">
+      <footer>
+      <p class="text-center">Copyright © 2016 Jelly_Wang All Rights Reserved</p>
+      </footer>
+    </div>
+    <!-- 网站介绍结束 -->
+    
+
+
+
+    
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

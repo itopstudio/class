@@ -1,0 +1,36 @@
+body{
+	padding-top: 80px;
+	padding-bottom: 50px;
+}
+hr.divider{
+  margin: 15px 0 15px 0;
+}
+footer .copyright{
+  margin:0 auto;
+}
+.row .rightContent{
+	min-height: 558px;
+	_height: 558px;
+}
+.row .leftList{
+	padding-top:20px; 
+	height: 600px;
+}
+.row .leftList li{
+	margin-bottom: 10px; 
+}
+
+.jibenzucheng{
+	margin-left: 100px;
+}
+.jibenzucheng button{
+	width:240px;
+	margin-right: 96px; 
+}
+.jiafenxuanxiang{
+	margin-left: 70px;
+}
+.jiafenxuanxiang button{
+	width:250px;
+	margin-right: 100px; 
+}

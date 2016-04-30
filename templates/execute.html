@@ -1,0 +1,1766 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>教学过程管理系统 执行页面</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/execute.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+          教学过程管理系统
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav col-xs-push-8">
+            <li><a href="index.html">建立<span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="execute.html">执行</a></li>
+            <li><a href="result.html">结果</a></li>
+            <li><a href="teacherHelp.html">使用说明</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right ">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">王老师 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">号码：019942</a></li>
+                <li><a href="#">级别：高级工程师</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">重新登陆</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+    <!-- 导航结束 -->
+    <div class="container" id="summary_container">
+      <!-- 标签页开始 -->
+      <div class="row">
+        <div class="col-md-3 panel panel-default leftList">
+          <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="#class1" aria-controls="class1" role="tab" data-toggle="tab">
+                <h4 class="list-group-item-heading">通信软件基础</h4>
+                <p class="list-group-item-text">通信工程专业卓越工程师班</p>
+                <p class="list-group-item-text">班级：01914 | 01,02</p>
+            </a></li>
+            <li role="presentation"><a href="#class2" aria-controls="class2" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件基础实训(1)</h4>
+              <p class="list-group-item-text">通信与信息类班</p>
+              <p class="list-group-item-text">班级：01014 | 10</p>
+            </a></li>
+            <li role="presentation"><a href="#class3" aria-controls="class3" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件基础实训(2)</h4>
+              <p class="list-group-item-text">通信学院IT精英班</p>
+              <p class="list-group-item-text">班级：01913 | 03</p>
+            </a></li>
+            <li role="presentation"><a href="#class4" aria-controls="class4" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件开发应用实训</h4>
+              <p class="list-group-item-text">信息工程班</p>
+              <p class="list-group-item-text">班级：01413 | 01</p>
+            </a></li>
+          </ul>
+        </div>
+        <div class="col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">您正在编辑：通信软件基础（通信工程专业卓越工程师班）班级：01914 | 01,02</div>
+            <div class="panel-body rightContent">
+              <div class="tab-content rightContentTab">
+                <div role="tabpanel" class="tab-pane active" id="class1">
+                  <div>
+                    <ul class="nav nav-tabs chengjigoucheng" role="tablist">
+                      <div class="pull-left">
+                        <h4 class="list-group-item-heading">组成</h4>
+                        <h4 class="list-group-item-heading">比例</h4>
+                        <h4 class="list-group-item-heading">次数</h4>
+                      </div>
+                      <li role="presentation" class="active"><a href="#pingshizuoye" aria-controls="pingshizuoye" role="tab" data-toggle="tab" >
+                        <h4 class="list-group-item-heading">平时作业</h4>
+                        <p class="list-group-item-text">5%</p>
+                        <p class="list-group-item-text">4次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#dazuoye" aria-controls="dazhuoye" role="tab" data-toggle="tab" >
+                        <h4 class="list-group-item-heading">大作业</h4>
+                        <p class="list-group-item-text">15%</p>
+                        <p class="list-group-item-text">2次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#dabian" aria-controls="dabian" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">答辩</h4>
+                        <p class="list-group-item-text">20%</p>
+                        <p class="list-group-item-text">2次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#kaoqin" aria-controls="kaoqin" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">考勤</h4>
+                        <p class="list-group-item-text">20%</p>
+                        <p class="list-group-item-text">4次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#banqikaoshi" aria-controls="banqikaoshi" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">半期考试</h4>
+                        <p class="list-group-item-text">20%</p>
+                        <p class="list-group-item-text">2次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#qimokaoshi" aria-controls="qimokaoshi" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">期末考试</h4>
+                        <p class="list-group-item-text">20%</p>
+                        <p class="list-group-item-text">1次</p>
+                      </a></li>
+                      <li role="presentation"><a href="#kechengjiafen" aria-controls="kechengjiafen" role="tab" data-toggle="tab">
+                        <h4 class="list-group-item-heading">课程加分</h4>
+                        <p class="list-group-item-text">上限:10分</p>
+                        <p class="list-group-item-text">1次</p>
+                      </a></li>
+                    </ul>
+                    <div class="tab-content">
+                      <!-- 作业切换开始 -->
+                      <div role="tabpanel" class="tab-pane active" id="pingshizuoye">
+                        <div>
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-pills cishugoucheng " role="tablist" id="pingshi_list">
+                            <li role="presentation" class="active" dat-index="1"><a href="#pingshizuoyeNo1" aria-controls="pingshizuoyeNo1" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第1次</p>
+                              <p class="list-group-item-text per_cent">25%</p>
+                            </a></li>
+                            <div>
+                              <button type="button" class="btn btn-default" id="pingshizuoye_add" style="width: 60px;height: 50px;margin:5px 10px 0">增加</button>
+                              <button type="button" class="btn btn-default" id="pingshizuoye_delete" style="width: 60px;height: 50px;margin:5px 0 0">减少</button>
+                            </div>
+                          </ul>
+                          <!-- Tab panes -->
+                          <div class="tab-content" id="pingshi_content">
+                            <div role="tabpanel" class="tab-pane active" dat-con-index="1" id="pingshizuoyeNo1">
+                              <!-- 内部便签切换开始 -->
+                              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="pingshizuoyeNo1headingOne">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#pingshizuoyeNo1collapseOne" aria-expanded="true" aria-controls="pingshizuoyeNo1collapseOne">
+                                        发布平时作业
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="pingshizuoyeNo1collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="pingshizuoyeNo1headingOne">
+                                    <div class="panel-body">
+                                      <!-- 基本组成表单开始 -->
+                                      <form class="jiafenxuanxiang">
+                                        <div class="clearfix">
+                                          <div class="form-group pull-left" style="width: 220px;margin-right: 15px;">
+                                            <label for="manfen">满分</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="manfen" placeholder="添加分数">
+                                              <div class="input-group-addon">分</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left" style="width: 394px">
+                                            <label for="pingdingren">评定人</label>
+                                            <input type="text" class="form-control" id="pingdingren" placeholder="作业评定人">
+                                          </div>
+                                          <div class="form-group pull-left" style="width: 220px">
+                                            <label for="fabushijian">发布时间</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="fabushijian" placeholder="格式：2016-04-23">
+                                              <div class="input-group-addon">日期</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left col-md-4">
+                                            <label for="jiezhishijian">截至时间</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="jiezhishijian" placeholder="格式：2016-05-23">
+                                              <div class="input-group-addon">日期</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left">
+                                            <label for="tijiaofangshi">提交方式</label>
+                                            <select class="form-control" id="tijiaofangshi" style="width: 170px">
+                                              <option selected="selected">线上提交</option>
+                                              <option>线下提交</option>
+                                            </select>
+                                          </div>
+                                          <div class="form-group pull-left">
+                                            <label for="timujixiangqing">题目及详情</label>
+                                            <textarea class="form-control" rows="3" cols="84" id="timujixiangqing" placeholder="请填写作业的题目以及详细要求。格式为（题目：...要求：...）"></textarea>
+                                          </div>
+                                          <div class="pull-left">
+                                            <button type="button" class="btn btn-primary">发布给学生</button>
+                                            <button type="button" class="btn btn-success">提交作业题目</button>
+                                            <button type="button" class="btn btn-danger">清空上述选项</button>
+                                          </div>
+                                        </div>
+                                      </form>
+                                      <!-- 基本组成表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="pingshizuoyeNo1headingTwo">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#pingshiNo1zuoyecollapseTwo" aria-expanded="false" aria-controls="pingshiNo1zuoyecollapseTwo">
+                                        添加平时作业成绩
+                                      </a>
+                                    </h4>
+                                    <button type="button" class="btn btn-success btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="baocunmuqiancaozuo">提交目前操作</button>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="baocunmuqiancaozuo">发布作业成绩给学生</button>
+                                  </div>
+                                  <div id="pingshiNo1zuoyecollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="pingshizuoyeNo1headingTwo">
+                                    <div class="panel-body">
+                                      <!-- 表格开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>学生编号</th>
+                                             <th>学生姓名</th>
+                                             <th>是否提交</th>
+                                             <th>下载作业</th>
+                                             <th>给予成绩</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>2011210045</td>
+                                             <td>神一豪</td>
+                                             <td>提交</td>
+                                             <td>
+                                               <button type="button" class="btn btn-default" id="xiazaizuoye">下载作业</button>
+                                             </td>
+                                             <td>
+                                               <div class="input-group" style="width: 200px">
+                                                 <input type="text" class="form-control" id="zuoyefenshu" placeholder="添加分数">
+                                                 <div class="input-group-addon">分</div>
+                                               </div>
+                                             </td>
+                                           </tr>
+                                           <tr>
+                                             <td>2011210046</td>
+                                             <td>王豆豆</td>
+                                             <td>未提交</td>
+                                             <td>
+                                               <button type="button" class="btn btn-default" id="xiazaizuoye">下载作业</button>
+                                             </td>
+                                             <td>
+                                                <div class="input-group" style="width: 200px">
+                                                 <input type="text" class="form-control" id="zuoyefenshu" placeholder="添加分数">
+                                                 <div class="input-group-addon">分</div>
+                                               </div>
+                                             </td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表格结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="pingshizuoyeNo1headingThree">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#pingshizuoyeNo1collapseThree" aria-expanded="false" aria-controls="pingshizuoyeNo1collapseThree">
+                                        平时作业统计结果
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="pingshizuoyeNo1collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="pingshizuoyeNo1headingThree">
+                                    <div class="panel-body">
+                                      <!-- 表单开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>学生编号</th>
+                                             <th>学生姓名</th>
+                                             <th>是否提交</th>
+                                             <th>给予成绩</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>2011210045</td>
+                                             <td>神一豪</td>
+                                             <td>提交</td>
+                                             <td>8</td>
+                                           </tr>
+                                           <tr>
+                                             <td>2011210046</td>
+                                             <td>王豆豆</td>
+                                             <td>未提交</td>
+                                             <td>0</td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 内部便签切换结束 -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 作业切换结束 -->
+                      <div role="tabpanel" class="tab-pane" id="dazuoye">
+                        <div>
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-pills cishugoucheng " role="tablist" id="dazuoye_list">
+                            <li role="presentation" class="active" dat-index="1"><a href="#dazuoyeNo1" aria-controls="dazuoyeNo1" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第1次</p>
+                              <p class="list-group-item-text per_cent">50%</p>
+                            </a></li>
+                            <div>
+                              <button type="button" class="btn btn-default" id="dazuoye_add" style="width: 60px;height: 50px;margin:5px 10px 0">增加</button>
+                              <button type="button" class="btn btn-default" id="dazuoye_delete" style="width: 60px;height: 50px;margin:5px 0 0">减少</button>
+                            </div>
+                          </ul>
+                          <!-- Tab panes -->
+                          <div class="tab-content" id="dazuoye_content">
+                            <div role="tabpanel" class="tab-pane active" dat-con-index="1" id="dazuoyeNo1">
+                              <!-- 内部便签切换开始 -->
+                              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="dazuoyeNo1headingOne">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#dazuoyeNo1collapseOne" aria-expanded="true" aria-controls="dazuoyeNo1collapseOne">
+                                        发布大作业
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="dazuoyeNo1collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="dazuoyeNo1headingOne">
+                                    <div class="panel-body">
+                                      <!-- 基本组成表单开始 -->
+                                      <form class="jiafenxuanxiang">
+                                        <div class="clearfix">
+                                          <div class="form-group pull-left" style="width: 220px;margin-right: 15px;">
+                                            <label for="manfen">满分</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="manfen" placeholder="添加分数">
+                                              <div class="input-group-addon">分</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left" style="width: 394px">
+                                            <label for="pingdingren">评定人</label>
+                                            <input type="text" class="form-control" id="pingdingren" placeholder="作业评定人">
+                                          </div>
+                                          <div class="form-group pull-left" style="width: 220px">
+                                            <label for="fabushijian">发布时间</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="fabushijian" placeholder="格式：2016-04-23">
+                                              <div class="input-group-addon">日期</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left col-md-4">
+                                            <label for="jiezhishijian">截至时间</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="jiezhishijian" placeholder="格式：2016-05-23">
+                                              <div class="input-group-addon">日期</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left">
+                                            <label for="tijiaofangshi">提交方式</label>
+                                            <select class="form-control" id="tijiaofangshi" style="width: 170px">
+                                              <option selected="selected">线上提交</option>
+                                              <option>线下提交</option>
+                                            </select>
+                                          </div>
+                                          <div class="form-group pull-left">
+                                            <label for="timujixiangqing">题目及详情</label>
+                                            <textarea class="form-control" rows="3" cols="84" id="timujixiangqing" placeholder="请填写作业的题目以及详细要求。格式为（题目：...要求：...）"></textarea>
+                                          </div>
+                                          <div class="pull-left">
+                                            <button type="button" class="btn btn-primary">发布给学生</button>
+                                            <button type="button" class="btn btn-success">提交作业题目</button>
+                                            <button type="button" class="btn btn-danger">清空上述选项</button>
+                                          </div>
+                                        </div>
+                                      </form>
+                                      <!-- 基本组成表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="dazuoyeNo1headingTwo">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dazuoyeNo1collapseTwo" aria-expanded="false" aria-controls="dazuoyeNo1collapseTwo">
+                                        添加大作业成绩
+                                      </a>
+                                    </h4>
+                                    <button type="button" class="btn btn-success btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="baocunmuqiancaozuo">提交目前操作</button>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="baocunmuqiancaozuo">发布作业成绩给学生</button>
+                                  </div>
+                                  <div id="dazuoyeNo1collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dazuoyeNo1headingTwo">
+                                    <div class="panel-body">
+                                      <!-- 表格开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>学生编号</th>
+                                             <th>学生姓名</th>
+                                             <th>是否提交</th>
+                                             <th>下载作业</th>
+                                             <th>给予成绩</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>2011210045</td>
+                                             <td>神一豪</td>
+                                             <td>提交</td>
+                                             <td>
+                                               <button type="button" class="btn btn-default" id="xiazaizuoye">下载作业</button>
+                                             </td>
+                                             <td>
+                                               <div class="input-group" style="width: 200px">
+                                                 <input type="text" class="form-control" id="zuoyefenshu" placeholder="添加分数">
+                                                 <div class="input-group-addon">分</div>
+                                               </div>
+                                             </td>
+                                           </tr>
+                                           <tr>
+                                             <td>2011210046</td>
+                                             <td>王豆豆</td>
+                                             <td>未提交</td>
+                                             <td>
+                                               <button type="button" class="btn btn-default" id="xiazaizuoye">下载作业</button>
+                                             </td>
+                                             <td>
+                                                <div class="input-group" style="width: 200px">
+                                                 <input type="text" class="form-control" id="zuoyefenshu" placeholder="添加分数">
+                                                 <div class="input-group-addon">分</div>
+                                               </div>
+                                             </td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表格结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="dazuoyeNo1headingThree">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dazuoyeNo1collapseThree" aria-expanded="false" aria-controls="dazuoyeNo1collapseThree">
+                                        大作业统计结果
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="dazuoyeNo1collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dazuoyeNo1headingThree">
+                                    <div class="panel-body">
+                                      <!-- 表单开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>学生编号</th>
+                                             <th>学生姓名</th>
+                                             <th>是否提交</th>
+                                             <th>给予成绩</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>2011210045</td>
+                                             <td>神一豪</td>
+                                             <td>提交</td>
+                                             <td>80</td>
+                                           </tr>
+                                           <tr>
+                                             <td>2011210046</td>
+                                             <td>王豆豆</td>
+                                             <td>未提交</td>
+                                             <td>0</td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 内部便签切换结束 -->
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 答辩切换开始 -->
+                      <div role="tabpanel" class="tab-pane" id="dabian">
+                        <div>
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-pills cishugoucheng " role="tablist">
+                            <li role="presentation" class="active"><a href="#dabianNo1" aria-controls="dabianNo1" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第一次</p>
+                              <p class="list-group-item-text">50%</p>
+                            </a></li>
+                            <li role="presentation"><a href="#dabianNo2" aria-controls="dabianNo2" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第二次</p>
+                              <p class="list-group-item-text">50%</p>
+                            </a></li>
+                          </ul>
+                          <!-- Tab panes -->
+                          <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="dabianNo1">
+                              <!-- 内部便签切换开始 -->
+                              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="dabianheadingOne">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#dabiancollapseOne" aria-expanded="true" aria-controls="dabiancollapseOne">
+                                        分配小组及编辑题目
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="dabiancollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="dabianheadingOne">
+                                    <div class="panel-body">
+                                      <!-- 基本组成表单开始 -->
+                                      <form class="jiafenxuanxiang" id="caozuodabianxinxi">
+                                          <div class="form-group pull-left" style="width: 300px">
+                                            <label for="xiaozuzuyuanrenshu">小组组员人数</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="xiaozuzuyuanrenshu" placeholder="添加每个小组组员人数">
+                                              <div class="input-group-addon">人</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left" style="margin-left: 30px;">
+                                            <label for="fenzufangshi">分组方式</label>
+                                            <select class="form-control" id="fenzufangshi" style="width: 300px">
+                                              <option selected="selected">按照输入人数自动分组</option>
+                                            </select>
+                                          </div>
+                                          <hr class="divider" style="width: 630px">
+                                          <div class="form-group pull-left" style="width: 300px;margin-right: 30px;">
+                                            <label for="dabianshijian">答辩时间</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="dabianshijian" placeholder="添加答辩时间">
+                                              <div class="input-group-addon">日期</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left" style="width: 300px;">
+                                            <label for="dabiandidian">答辩地点</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="dabiandidian" placeholder="添加答辩地点">
+                                              <div class="input-group-addon">地点</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left" style="width: 220px">
+                                            <label for="dabianbaogafabushijian">答辩报告发布时间</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="dabianbaogafabushijian" placeholder="格式：2016-04-23">
+                                              <div class="input-group-addon">日期</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left col-md-4">
+                                            <label for="dabianbaogaojiezhishijian">答辩报告截至时间</label>
+                                            <div class="input-group">
+                                              <input type="text" class="form-control" id="dabianbaogaojiezhishijian" placeholder="格式：2016-05-23">
+                                              <div class="input-group-addon">日期</div>
+                                            </div>
+                                          </div>
+                                          <div class="form-group pull-left">
+                                            <label for="dabianbaogaotijiaofangshi">提交方式</label>
+                                            <select class="form-control" id="dabianbaogaotijiaofangshi" style="width: 170px">
+                                              <option selected="selected">线上提交</option>
+                                              <option>线下提交</option>
+                                            </select>
+                                          </div>
+                                          <hr class="divider" style="width: 630px">
+                                          <div class="form-group pull-left" id="dabiantimutiaomu">
+                                            <label for="dabianxiaozutimu">答辩小组题目</label>
+                                            <div class="input-group">
+                                              <span class="input-group-addon">
+                                                <input type="checkbox">
+                                              </span>
+                                              <input type="text" class="form-control" id="dabianxiaozutimu" placeholder="填写并勾选答辩小组题目以免分配题目时无题目选择" style="width: 590px">
+                                            </div>
+                                          </div>
+                                          <div class="pull-left">
+                                            <button type="button" class="btn btn-primary" id="tianjiatimu">添加题目</button>
+                                            <button type="button" class="btn btn-success">提交操作</button>
+                                            <button type="button" class="btn btn-danger" id="shanchutimu">删除题目</button>
+                                          </div>
+                                      </form>
+                                      <!-- 基本组成表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="dabianheadingTwo">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dabiancollapseTwo" aria-expanded="false" aria-controls="dabiancollapseTwo">
+                                        分配答辩题目
+                                      </a>
+                                    </h4>
+                                    <button type="button" class="btn btn-success btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="baocunmuqiancaozuo">提交目前操作</button>
+                                    <button type="button" class="btn btn-primary btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="baocunmuqiancaozuo">发布答辩题目给学生</button>
+                                  </div>
+                                  <div id="dabiancollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dabianheadingTwo">
+                                    <div class="panel-body">
+                                      <!-- 表格开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>小组编号</th>
+                                             <th>学生姓名</th>
+                                             <th>分配题目</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>001</td>
+                                             <td>神一豪 王大成 毛建林 王才人</td>
+
+                                             <td>
+                                               <select class="form-control" id="dabianxiaozutimu" name="dabianxiaozutimu">
+                                                 <option>论4G技术与当今社会的运用</option>
+                                                 <option>当代大学生对学习的看法</option>
+                                               </select>
+                                             </td>
+                                           </tr>
+                                           <tr>
+                                             <td>002</td>
+                                             <td>王豆豆 杨一繁 章立 荣一</td>
+                                             <td>
+                                                <select class="form-control" id="dabianxiaozutimu" name="dabianxiaozutimu">
+                                                 <option>论4G技术与当今社会的运用</option>
+                                                 <option>当代大学生对学习的看法</option>
+                                               </select>
+                                             </td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表格结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="dabianheadingThree">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dabiancollapseThree" aria-expanded="false" aria-controls="dabiancollapseThree">
+                                        添加答辩成绩
+                                      </a>
+                                      <button type="button" class="btn btn-primary btn-xs pull-right" style="margin-top: -2px;margin-left: 10px;" id="baocunmuqiancaozuo">发布答辩成绩给学生</button>
+                                      <button type="button" class="btn btn-success btn-xs pull-right" style="margin-top: -2px;margin-left: 10px;" id="baocunmuqiancaozuo">提交目前操作</button>
+                                    </h4>
+                                  </div>
+                                  <div id="dabiancollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dabianheadingThree">
+                                    <div class="panel-body">
+                                      <!-- 表单开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>小组编号</th>
+                                             <th>学生姓名</th>
+                                             <th>分配题目</th>
+                                             <th>是否提交</th>
+                                             <th>下载报告</th>
+                                             <th>答辩成绩</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>001</td>
+                                             <td>神一豪 王大成 毛建林 王才人</td>
+                                             <td>
+                                               论4G技术与当今社会的运用
+                                             </td>
+                                             <td>
+                                               提交
+                                             </td>
+                                             <td>
+                                               <button type="button" class="btn btn-default" id="xiazaibaogao">下载报告</button>
+                                             </td>
+                                             <td>
+                                               <div class="input-group" style="width: 130px">
+                                                 <input type="text" class="form-control" id="dabianfenshu0" placeholder="添加分数">
+                                                 <div class="input-group-addon">分</div>
+                                               </div>
+                                             </td>
+                                           </tr>
+                                           <tr>
+                                             <td>002</td>
+                                             <td>王豆豆 杨一繁 章立 荣一</td>
+                                             <td>
+                                                当代大学生对学习的看法
+                                             </td>
+                                             <td>
+                                               未提交
+                                             </td>
+                                             <td>
+                                               <button type="button" class="btn btn-default" id="xiazaibaogao">下载报告</button>
+                                             </td>
+                                             <td>
+                                               <div class="input-group" style="width: 130px">
+                                                 <input type="text" class="form-control" id="dabianfenshu1" placeholder="添加分数">
+                                                 <div class="input-group-addon">分</div>
+                                               </div>
+                                              </td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="dabianheadingFour">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dabiancollapseFour" aria-expanded="false" aria-controls="dabiancollapseFour">
+                                        答辩统计结果
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="dabiancollapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dabianheadingFour">
+                                    <div class="panel-body">
+                                      <!-- 表单开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>小组编号</th>
+                                             <th>学生姓名</th>
+                                             <th>分配题目</th>
+                                             <th>是否提交</th>
+                                             <th>答辩成绩</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>001</td>
+                                             <td>神一豪 王大成 毛建林 王才人</td>
+                                             <td>
+                                               论4G技术与当今社会的运用
+                                             </td>
+                                             <td>提交</td>
+                                             <td>
+                                               70
+                                             </td>
+                                           </tr>
+                                           <tr>
+                                             <td>002</td>
+                                             <td>王豆豆 杨一繁 章立 荣一</td>
+                                             <td>
+                                                当代大学生对学习的看法
+                                             </td>
+                                             <td>未提交</td>
+                                             <td>
+                                               0
+                                             </td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 内部便签切换结束 -->
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="dabianNo2">.2..</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 答辩切换结束 -->
+                      <!-- 考勤切换开始 -->
+                      <div role="tabpanel" class="tab-pane" id="kaoqin">
+                        <div>
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-pills cishugoucheng " role="tablist">
+                            <li role="presentation" class="active"><a href="#kaoqinNoFirst" aria-controls="kaoqinNoFirst" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第一次</p>
+                              <p class="list-group-item-text per_cent">25%</p>
+                            </a></li>
+                            <li role="presentation"><a href="#kaoqinNoSecond" aria-controls="kaoqinNoSecond" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第二次</p>
+                              <p class="list-group-item-text per_cent">25%</p>
+                            </a></li>
+                            <li role="presentation"><a href="#kaoqinNoThird" aria-controls="kaoqinNoThird" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第三次</p>
+                              <p class="list-group-item-text per_cent">25%</p>
+                            </a></li>
+                            <li role="presentation" class="fyr"><a href="#kaoqinNofourth" aria-controls="kaoqinNofourth" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第四次</p>
+                              <p class="list-group-item-text per_cent">25%</p>
+                            </a></li>
+                          </ul>
+                          <!-- Tab panes -->
+                          <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="kaoqinNoFirst">
+                              <!-- 内部便签切换开始 -->
+                              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="kaoqinheadingOne">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#kaoqincollapseOne" aria-expanded="true" aria-controls="kaoqincollapseOne">
+                                        添加考勤情况
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="kaoqincollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="kaoqinheadingOne">
+                                    <div class="panel-body">
+                                      <!-- 表格开始 -->
+                                      <form>
+                                        <div class="form-group pull-left" style="width: 300px;margin-right: 30px;">
+                                          <label for="qingjiakoufen">请假所得成绩占该次成绩比例</label>
+                                          <select class="form-control" id="qingjiakoufen">
+                                            <option>1/10</option>
+                                            <option>2/10</option>
+                                            <option>3/10</option>
+                                            <option>4/10</option>
+                                            <option>5/10</option>
+                                            <option>6/10</option>
+                                            <option>7/10</option>
+                                            <option>8/10</option>
+                                            <option>9/10</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group pull-left" style="width: 300px;margin-right: 30px;">
+                                          <label for="chidaokoufen">迟到所得成绩占该次成绩比例</label>
+                                          <select class="form-control" id="chidaokoufen">
+                                            <option>1/10</option>
+                                            <option>2/10</option>
+                                            <option>3/10</option>
+                                            <option>4/10</option>
+                                            <option>5/10</option>
+                                            <option>6/10</option>
+                                            <option>7/10</option>
+                                            <option>8/10</option>
+                                            <option>9/10</option>
+                                          </select>
+                                        </div>
+                                        <div class="form-group pull-right" style="margin-top: 24px;">
+                                          <button type="button" class="btn btn-primary" style="margin-right: 10px">发布</button>
+                                          <button type="button" class="btn btn-success">提交</button>
+                                        </div>
+                                        <table class="table table-bordered table-hover table-striped">
+                                           <thead>
+                                             <tr>
+                                               <th>学生编号</th>
+                                               <th>学生姓名</th>
+                                               <th>正常</th>
+                                               <th>请假</th>
+                                               <th>迟到</th>
+                                               <th>旷课</th>
+                                             </tr>
+                                           </thead>
+                                           <tbody>
+                                             <tr>
+                                               <td>2011210045</td>
+                                               <td>神一豪</td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio2" value="option2">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio3" value="option3">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio4" value="option4">
+                                                 </label>
+                                               </td>
+                                             </tr>
+                                             <tr>
+                                               <td>2011210046</td>
+                                               <td>王豆豆</td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio1" value="option1">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio2" value="option2">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio3" value="option3">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio4" value="option4">
+                                                 </label>
+                                               </td>
+                                             </tr>
+                                           </tbody>
+                                         </table>
+                                      </form>
+                                      <!-- 表格结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="kaoqinheadingTwo">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#kaoqincollapseTwo" aria-expanded="false" aria-controls="kaoqincollapseTwo">
+                                        考勤统计结果
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="kaoqincollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="kaoqinheadingTwo">
+                                    <div class="panel-body">
+                                      <!-- 表单开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>学生编号</th>
+                                             <th>学生姓名</th>
+                                             <th>正常</th>
+                                             <th>请假</th>
+                                             <th>迟到</th>
+                                             <th>旷课</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>2011210045</td>
+                                             <td>神一豪</td>
+                                             <td>是</td>
+                                             <td>否</td>
+                                             <td>否</td>
+                                             <td>否</td>
+                                           </tr>
+                                           <tr>
+                                             <td>2011210046</td>
+                                             <td>王豆豆</td>
+                                             <td>是</td>
+                                             <td>否</td>
+                                             <td>否</td>
+                                             <td>否</td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 内部便签切换结束 -->
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="kaoqinNoSecond">..2.</div>
+                            <div role="tabpanel" class="tab-pane" id="kaoqinNoThird">...3</div>
+                            <div role="tabpanel" class="tab-pane" id="kaoqinNofourth">..4.</div>
+                          </div>
+                        </div>
+                        <!-- 考勤切换结束 -->
+                      </div>
+                      <!-- 考勤切换结束 -->
+                      <!-- 半期考试开始 -->
+                      <div role="tabpanel" class="tab-pane" id="banqikaoshi">
+                        <div>
+                          <!-- Nav tabs -->
+                          <ul class="nav nav-pills cishugoucheng " role="tablist">
+                            <li role="presentation" class="active"><a href="#banqikaoshiNoFirst" aria-controls="banqikaoshiNoFirst" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第一次</p>
+                              <p class="list-group-item-text">50%</p>
+                            </a></li>
+                            <li role="presentation"><a href="#banqikaoshiNoSecond" aria-controls="banqikaoshiNoSecond" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第二次</p>
+                              <p class="list-group-item-text">50%</p>
+                            </a></li>
+                          </ul>
+                          <!-- Tab panes -->
+                          <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="banqikaoshiNoFirst">
+                              <!-- 内部便签切换开始 -->
+                              <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="banqiheadingThree">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#banqincollapseThree" aria-expanded="true" aria-controls="banqincollapseThree">
+                                        添加半期考试资格
+                                      </a>
+                                    </h4>
+                                </div>
+                                  <div id="banqincollapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="banqiheadingThree">
+                                    <div class="panel-body">
+                                      <!-- 表格开始 -->
+                                      <form>
+                                        <div class="form-group pull-right">
+                                          <button type="button" class="btn btn-success" style="width: 380px;">提交</button>
+                                        </div>
+                                        <div class="form-group pull-left">
+                                          <button type="button" class="btn btn-primary" style="width: 380px;">发布</button>
+                                        </div>
+                                        <table class="table table-bordered table-hover table-striped">
+                                           <thead>
+                                             <tr>
+                                               <th>学生编号</th>
+                                               <th>学生姓名</th>
+                                               <th>（有）考试资格</th>
+                                               <th>（无）考试资格</th>
+                                               <th>（无）考试资格详细说明</th>
+                                             </tr>
+                                           </thead>
+                                           <tbody>
+                                             <tr>
+                                               <td>2011210045</td>
+                                               <td>神一豪</td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio1" value="option3">
+                                                   有
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio2" value="option3">
+                                                   无
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <select class="form-control">
+                                                   <option>无</option>
+                                                   <option>例子：缺勤次数过多</option>
+                                                   <option>例子：打扰行课秩序</option>
+                                                   <option>例子：作业上交次数过少</option>
+                                                 </select>
+                                               </td>
+                                             </tr>
+                                             <tr>
+                                               <td>2011210046</td>
+                                               <td>王豆豆</td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio1" value="option3">
+                                                   有
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio2" value="option3">
+                                                   无
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <select class="form-control">
+                                                   <option>无</option>
+                                                   <option>例子：缺勤次数过多</option>
+                                                   <option>例子：打扰行课秩序</option>
+                                                   <option>例子：作业上交次数过少</option>
+                                                 </select>
+                                               </td>
+                                             </tr>
+                                           </tbody>
+                                         </table>
+                                      </form>
+                                      <!-- 表格结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="banqiheadingFour">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#banqicollapseFour" aria-expanded="false" aria-controls="banqicollapseFour">
+                                        半期考试资格统计结果
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="banqicollapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="banqiheadingFour">
+                                    <div class="panel-body">
+                                      <!-- 表单开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>学生编号</th>
+                                             <th>学生姓名</th>
+                                             <th>（有）考试资格</th>
+                                             <th>（无）考试资格</th>
+                                             <th>（无）考试资格详细说明</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>2011210045</td>
+                                             <td>神一豪</td>
+                                             <td>
+                                               是
+                                             </td>
+                                             <td>
+                                               否
+                                             </td>
+                                             <td>
+                                               无
+                                             </td>
+                                           </tr>
+                                           <tr>
+                                             <td>2011210046</td>
+                                             <td>王豆豆</td>
+                                             <td>
+                                               否
+                                             </td>
+                                             <td>
+                                               是
+                                             </td>
+                                             <td>
+                                               例子：打扰行课秩序
+                                             </td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="banqiheadingOne">
+                                    <h4 class="panel-title">
+                                      <a role="button" data-toggle="collapse" data-parent="#accordion" href="#banqincollapseOne" aria-expanded="true" aria-controls="banqincollapseOne">
+                                        添加半期成绩
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="banqincollapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="banqiheadingOne">
+                                    <div class="panel-body">
+                                      <!-- 表格开始 -->
+                                      <form>
+                                        <div class="form-group pull-right">
+                                          <button type="button" class="btn btn-success" style="width: 380px;">提交</button>
+                                        </div>
+                                        <div class="form-group pull-left">
+                                          <button type="button" class="btn btn-primary" style="width: 380px;">发布</button>
+                                        </div>
+                                        <table class="table table-bordered table-hover table-striped">
+                                           <thead>
+                                             <tr>
+                                               <th>学生编号</th>
+                                               <th>学生姓名</th>
+                                               <th>正常</th>
+                                               <th>缺考</th>
+                                               <th>作弊</th>
+                                               <th>成绩</th>
+                                             </tr>
+                                           </thead>
+                                           <tbody>
+                                             <tr>
+                                               <td>2011210045</td>
+                                               <td>神一豪</td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio2" value="option2">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio" id="blankRadio3" value="option3">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <div class="input-group" style="width: 200px">
+                                                 <input type="text" class="form-control" id="gerenqizhongfenshu" placeholder="添加个人期中分数">
+                                                 <div class="input-group-addon">分</div>
+                                               </div>
+                                               </td>
+                                             </tr>
+                                             <tr>
+                                               <td>2011210046</td>
+                                               <td>王豆豆</td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio1" value="option1">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio2" value="option2">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <label>
+                                                   <input type="radio" name="blankRadio1" id="blankRadio3" value="option3">
+                                                 </label>
+                                               </td>
+                                               <td>
+                                                 <div class="input-group" style="width: 200px">
+                                                 <input type="text" class="form-control" id="gerenqizhongfenshu" placeholder="添加个人期中分数">
+                                                 <div class="input-group-addon">分</div>
+                                               </td>
+                                             </tr>
+                                           </tbody>
+                                         </table>
+                                      </form>
+                                      <!-- 表格结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="panel panel-default">
+                                  <div class="panel-heading" role="tab" id="banqiheadingTwo">
+                                    <h4 class="panel-title">
+                                      <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#banqicollapseTwo" aria-expanded="false" aria-controls="banqicollapseTwo">
+                                        半期统计结果
+                                      </a>
+                                    </h4>
+                                  </div>
+                                  <div id="banqicollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="banqiheadingTwo">
+                                    <div class="panel-body">
+                                      <!-- 表单开始 -->
+                                      <table class="table table-bordered table-hover table-striped">
+                                         <thead>
+                                           <tr>
+                                             <th>学生编号</th>
+                                             <th>学生姓名</th>
+                                             <th>正常</th>
+                                             <th>缺考</th>
+                                             <th>作弊</th>
+                                             <th>成绩</th>
+                                           </tr>
+                                         </thead>
+                                         <tbody>
+                                           <tr>
+                                             <td>2011210045</td>
+                                             <td>神一豪</td>
+                                             <td>是</td>
+                                             <td>否</td>
+                                             <td>否</td>
+                                             <td>80</td>
+                                           </tr>
+                                           <tr>
+                                             <td>2011210046</td>
+                                             <td>王豆豆</td>
+                                             <td>是</td>
+                                             <td>否</td>
+                                             <td>否</td>
+                                             <td>70</td>
+                                           </tr>
+                                         </tbody>
+                                       </table>
+                                      <!-- 表单结束 -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- 内部便签切换结束 -->
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="banqikaoshiNoSecond">.2..</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 半期考试结束 -->
+                      <!-- 期末考试开始 -->
+                      <div role="tabpanel" class="tab-pane" id="qimokaoshi">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="qimoheadingThree">
+                              <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#qimoncollapseThree" aria-expanded="true" aria-controls="qimoncollapseThree">
+                                  添加期末考试资格
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="qimoncollapseThree" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="qimoheadingThree">
+                              <div class="panel-body">
+                                <!-- 表格开始 -->
+                                <form>
+                                  <div class="form-group pull-right">
+                                    <button type="button" class="btn btn-success" style="width: 380px;">提交</button>
+                                  </div>
+                                  <div class="form-group pull-left">
+                                    <button type="button" class="btn btn-primary" style="width: 380px;">发布</button>
+                                  </div>
+                                  <table class="table table-bordered table-hover table-striped">
+                                     <thead>
+                                       <tr>
+                                         <th>学生编号</th>
+                                         <th>学生姓名</th>
+                                         <th>（有）考试资格</th>
+                                         <th>（无）考试资格</th>
+                                         <th>（无）考试资格详细说明</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                       <tr>
+                                         <td>2011210045</td>
+                                         <td>神一豪</td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio" id="blankRadio1" value="option3">
+                                             有
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio" id="blankRadio2" value="option3">
+                                             无
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <select class="form-control">
+                                             <option>无</option>
+                                             <option>例子：缺勤次数过多</option>
+                                             <option>例子：打扰行课秩序</option>
+                                             <option>例子：作业上交次数过少</option>
+                                           </select>
+                                         </td>
+                                       </tr>
+                                       <tr>
+                                         <td>2011210046</td>
+                                         <td>王豆豆</td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio1" id="blankRadio1" value="option3">
+                                             有
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio1" id="blankRadio2" value="option3">
+                                             无
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <select class="form-control">
+                                             <option>无</option>
+                                             <option>例子：缺勤次数过多</option>
+                                             <option>例子：打扰行课秩序</option>
+                                             <option>例子：作业上交次数过少</option>
+                                           </select>
+                                         </td>
+                                       </tr>
+                                     </tbody>
+                                   </table>
+                                </form>
+                                <!-- 表格结束 -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="qimoheadingFour">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#qimocollapseFour" aria-expanded="false" aria-controls="qimocollapseFour">
+                                  期末考试资格统计结果
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="qimocollapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="qimoheadingFour">
+                              <div class="panel-body">
+                                <!-- 表单开始 -->
+                                <table class="table table-bordered table-hover table-striped">
+                                   <thead>
+                                     <tr>
+                                       <th>学生编号</th>
+                                       <th>学生姓名</th>
+                                       <th>（有）考试资格</th>
+                                       <th>（无）考试资格</th>
+                                       <th>（无）考试资格详细说明</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                     <tr>
+                                       <td>2011210045</td>
+                                       <td>神一豪</td>
+                                       <td>
+                                         是
+                                       </td>
+                                       <td>
+                                         否
+                                       </td>
+                                       <td>
+                                         无
+                                       </td>
+                                     </tr>
+                                     <tr>
+                                       <td>2011210046</td>
+                                       <td>王豆豆</td>
+                                       <td>
+                                         否
+                                       </td>
+                                       <td>
+                                         是
+                                       </td>
+                                       <td>
+                                         例子：打扰行课秩序
+                                       </td>
+                                     </tr>
+                                   </tbody>
+                                 </table>
+                                <!-- 表单结束 -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="qimoheadingOne">
+                              <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#qimocollapseOne" aria-expanded="true" aria-controls="qimocollapseOne">
+                                  添加期末成绩
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="qimocollapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="qimoheadingOne">
+                              <div class="panel-body">
+                                <!-- 表格开始 -->
+                                <form>
+                                  <div class="form-group pull-right">
+                                    <button type="button" class="btn btn-success" style="width: 380px;">提交</button>
+                                  </div>
+                                  <div class="form-group pull-left">
+                                    <button type="button" class="btn btn-primary" style="width: 380px;">发布</button>
+                                  </div>
+                                  <table class="table table-bordered table-hover table-striped">
+                                     <thead>
+                                       <tr>
+                                         <th>学生编号</th>
+                                         <th>学生姓名</th>
+                                         <th>正常</th>
+                                         <th>缺考</th>
+                                         <th>作弊</th>
+                                         <th>成绩</th>
+                                       </tr>
+                                     </thead>
+                                     <tbody>
+                                       <tr>
+                                         <td>2011210045</td>
+                                         <td>神一豪</td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio" id="blankRadio1" value="option1">
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio" id="blankRadio2" value="option2">
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio" id="blankRadio3" value="option3">
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <div class="input-group" style="width: 200px">
+                                           <input type="text" class="form-control" id="gerenqimofenshu" placeholder="添加个人期末分数">
+                                           <div class="input-group-addon">分</div>
+                                         </div>
+                                         </td>
+                                       </tr>
+                                       <tr>
+                                         <td>2011210046</td>
+                                         <td>王豆豆</td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio1" id="blankRadio1" value="option1">
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio1" id="blankRadio2" value="option2">
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <label>
+                                             <input type="radio" name="blankRadio1" id="blankRadio3" value="option3">
+                                           </label>
+                                         </td>
+                                         <td>
+                                           <div class="input-group" style="width: 200px">
+                                           <input type="text" class="form-control" id="gerenqimofenshu" placeholder="添加个人期末分数">
+                                           <div class="input-group-addon">分</div>
+                                         </td>
+                                       </tr>
+                                     </tbody>
+                                   </table>
+                                </form>
+                                <!-- 表格结束 -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="qimoheadingTwo">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#qimocollapseTwo" aria-expanded="false" aria-controls="qimocollapseTwo">
+                                  期末统计结果
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="qimocollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="qimoheadingTwo">
+                              <div class="panel-body">
+                                <!-- 表单开始 -->
+                                <table class="table table-bordered table-hover table-striped">
+                                   <thead>
+                                     <tr>
+                                       <th>学生编号</th>
+                                       <th>学生姓名</th>
+                                       <th>正常</th>
+                                       <th>缺考</th>
+                                       <th>作弊</th>
+                                       <th>成绩</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                     <tr>
+                                       <td>2011210045</td>
+                                       <td>神一豪</td>
+                                       <td>是</td>
+                                       <td>否</td>
+                                       <td>否</td>
+                                       <td>80</td>
+                                     </tr>
+                                     <tr>
+                                       <td>2011210046</td>
+                                       <td>王豆豆</td>
+                                       <td>是</td>
+                                       <td>否</td>
+                                       <td>否</td>
+                                       <td>70</td>
+                                     </tr>
+                                   </tbody>
+                                 </table>
+                                <!-- 表单结束 -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 期末考试结束 -->
+                      <!-- 课程加分开始 -->
+                      <div role="tabpanel" class="tab-pane" id="kechengjiafen">
+                        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="jiafenheadingOne">
+                              <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#jiafencollapseOne" aria-expanded="true" aria-controls="jiafencollapseOne">
+                                  操作学生请求
+                                </a>
+                                <button type="button" class="btn btn-primary btn-xs pull-right" style="margin-top: -3px;margin-left: 10px;" id="baocunmuqiancaozuo">刷新当前请求</button>
+                              </h4>
+                            </div>
+                            <div id="jiafencollapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="jiafenheadingOne">
+                              <div class="panel-body" id="jiafenqingqiutiaomu">
+                                <!-- 表格开始 -->
+                                <form>
+                                  <table class="table table-bordered table-hover table-striped">
+                                   <thead>
+                                     <tr>
+                                       <th>学生编号</th>
+                                       <td>学生姓名</td>
+                                       <td>加分项</td>
+                                       <td>加分</td>
+                                       <td>说明
+                                          <button type="button" class="btn btn-default btn-xs pull-right"style="width: 60px">不同意</button>
+                                          <button type="button" class="btn btn-success btn-xs pull-right" style="width: 60px;margin-right: 10px;">同 意</button>
+                                       </td>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                     <tr>
+                                       <th rowspan="5" style="vertical-align: middle;">
+                                          2011210046
+                                       </th>
+                                       <th rowspan="5" style="vertical-align: middle;">沈自如</th>
+                                       <td>上课举手积极</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>4月25日上课举手积极，表现良好</td>
+                                     </tr>
+                                      <tr>
+                                        <td>课外涉及广泛</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>老师规定的读物已阅读</td>
+                                      </tr> 
+                                      <tr>
+                                        <td>小组谈论活跃</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>4月25日小组讨论结果不错</td>
+                                      </tr>  
+                                      <tr>
+                                        <td>行为礼貌带动氛围</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>上课期间礼貌对人，早读不落</td>
+                                      </tr> 
+                                      <tr>
+                                        <td>回答特殊问题</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>4月25日老师的问题回答不错</td>
+                                      </tr> 
+                                   </tbody>
+                                  </table>
+                                </form>
+                                <form>
+                                  <table class="table table-bordered table-hover table-striped">
+                                   <thead>
+                                     <tr>
+                                       <th>学生编号</th>
+                                       <td>学生姓名</td>
+                                       <td>加分项</td>
+                                       <td>加分</td>
+                                       <td>说明
+                                          <button type="button" class="btn btn-default btn-xs pull-right"style="width: 60px">不同意</button>
+                                          <button type="button" class="btn btn-success btn-xs pull-right" style="width: 60px;margin-right: 10px;">同 意</button>
+                                       </td>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                     <tr>
+                                       <th rowspan="5" style="vertical-align: middle;">
+                                          2011210045
+                                       </th>
+                                       <th rowspan="5" style="vertical-align: middle;">王豆豆</th>
+                                       <td>上课举手积极</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>4月25日上课举手积极，表现良好</td>
+                                     </tr>
+                                      <tr>
+                                        <td>课外涉及广泛</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>老师规定的读物已阅读</td>
+                                      </tr> 
+                                      <tr>
+                                        <td>小组谈论活跃</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>4月25日小组讨论结果不错</td>
+                                      </tr>  
+                                      <tr>
+                                        <td>行为礼貌带动氛围</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>上课期间礼貌对人，早读不落</td>
+                                      </tr> 
+                                      <tr>
+                                        <td>回答特殊问题</td>
+                                       <td>
+                                         1
+                                       </td>
+                                       <td>4月25日老师的问题回答不错</td>
+                                      </tr> 
+                                   </tbody>
+                                  </table>
+                                </form>
+                                <!-- 表格结束 -->
+                              </div>
+                            </div>
+                          </div>
+                          <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="jiafenheadingTwo">
+                              <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#jiafencollapseTwo" aria-expanded="false" aria-controls="jiafencollapseTwo">
+                                  加分统计结果
+                                </a>
+                              </h4>
+                            </div>
+                            <div id="jiafencollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="jiafenheadingTwo">
+                              <div class="panel-body">
+                                <!-- 表单开始 -->
+                                <table class="table table-bordered table-hover table-striped">
+                                   <thead>
+                                     <tr>
+                                       <th>学生编号</th>
+                                       <th>学生姓名</th>
+                                       <th>上课举手积极</th>
+                                       <th>课外涉及广泛</th>
+                                       <th>小组谈论活跃</th>
+                                       <th>行为礼貌带动氛围</th>
+                                       <th>回答特殊问题</th>
+                                       <th>查看详情</th>
+                                     </tr>
+                                   </thead>
+                                   <tbody>
+                                     <tr>
+                                       <td>2011210045</td>
+                                       <td>神一豪</td>
+                                       <td>1</td>
+                                       <td>2</td>
+                                       <td>1</td>
+                                       <td>2</td>
+                                       <td>2</td>
+                                       <td><a href="add.html" target="_blank">点击查看</a></td>
+                                     </tr>
+                                     <tr>
+                                       <td>2011210046</td>
+                                       <td>王豆豆</td>
+                                       <td>1</td>
+                                       <td>1</td>
+                                       <td>1</td>
+                                       <td>1</td>
+                                       <td>1</td>
+                                       <td><a href="add.html" target="_blank">点击查看</a></td>
+                                     </tr>
+                                   </tbody>
+                                 </table>
+                                <!-- 表单结束 -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 课程加分结束 -->
+                    </div>
+                  </div>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class2">
+                  <div class="page-header">
+                    <h3>考核组成</h3>
+                  </div>
+                  <p>...</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class3">
+                  <div class="page-header">
+                    <h3>成绩录入</h3>
+                  </div>
+                  <p>...</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class4">
+                  <div class="page-header">
+                    <h3>答辩组织</h3>
+                  </div>
+                  <p>...</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 标签页结束   -->
+      <!-- 尾部开始 -->
+      <hr class="divider">
+      <footer>
+      <p class="text-center">Copyright © 2016 Jelly_Wang All Rights Reserved</p>
+      </footer>
+    </div>
+    <!-- 网站介绍结束 -->
+    
+
+
+
+    
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/execute.js"></script>
+  </body>
+</html>
