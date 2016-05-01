@@ -1,0 +1,55 @@
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+          教学过程管理系统
+          </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav col-xs-push-8">
+            {if $activeTab == 1}
+            <li class="active"><a href="create.php">建立<span class="sr-only">(current)</span></a></li>
+            {else}
+            <li><a href="create.php">建立</a></li>
+            {/if}
+
+            {if $activeTab == 2}
+            <li class="active"><a href="execute.php">执行<span class="sr-only">(current)</span></a></li>
+            {else}
+            <li><a href="execute.php">执行</a></li>
+            {/if}
+
+            {if $activeTab == 3}
+            <li class="active"><a href="result.php">结果<span class="sr-only">(current)</span></a></li>
+            {else}
+            <li><a href="result.php">结果</a></li>
+            {/if}
+
+            {if $activeTab == 4}
+            <li class="active"><a href="teacherHelp.php">使用说明<span class="sr-only">(current)</span></a></li>
+            {else}
+            <li><a href="teacherHelp.php">使用说明</a></li>
+            {/if}
+          </ul>
+          <ul class="nav navbar-nav navbar-right ">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">王老师 <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">号码：019942</a></li>
+                <li><a href="#">级别：高级工程师</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">重新登陆</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>

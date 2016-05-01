@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>教学过程管理系统 建立页面</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+      <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+  <body>
+    {include 'nav.html'}
+    <!-- 导航结束 -->
+    <div class="container" id="summary_container">
+      <!-- 标签页开始 -->
+      <div class="row">
+        <div class="col-md-3 panel panel-default leftList">
+          <ul class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="#class1" aria-controls="class1" role="tab" data-toggle="tab">
+                <h4 class="list-group-item-heading">通信软件基础</h4>
+                <p class="list-group-item-text">通信工程专业卓越工程师班</p>
+                <p class="list-group-item-text">班级：01914 | 01,02</p>
+            </a></li>
+            <li role="presentation"><a href="#class2" aria-controls="class2" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件基础实训(1)</h4>
+              <p class="list-group-item-text">通信与信息类班</p>
+              <p class="list-group-item-text">班级：01014 | 10</p>
+            </a></li>
+            <li role="presentation"><a href="#class3" aria-controls="class3" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件基础实训(2)</h4>
+              <p class="list-group-item-text">通信学院IT精英班</p>
+              <p class="list-group-item-text">班级：01913 | 03</p>
+            </a></li>
+            <li role="presentation"><a href="#class4" aria-controls="class4" role="tab" data-toggle="tab">
+              <h4 class="list-group-item-heading">通信软件开发应用实训</h4>
+              <p class="list-group-item-text">信息工程班</p>
+              <p class="list-group-item-text">班级：01413 | 01</p>
+            </a></li>
+          </ul>
+        </div>
+        <div class="col-md-9">
+          <div class="panel panel-default">
+            <div class="panel-heading">您正在编辑：通信软件基础（通信工程专业卓越工程师班）班级：01914 | 01,02</div>
+            <div class="panel-body rightContent">
+              <div class="tab-content rightContentTab">
+                <div role="tabpanel" class="tab-pane active" id="class1">
+                  <!-- 内部便签切换开始 -->
+                  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                          <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            基本组成
+                          </a>
+                        </h4>
+                        <button type="button" class="btn btn-default btn-xs pull-right" style="margin-top: -20px" id="tianjiakaochaxuanxiang">添加考察选项</button>
+                        <button type="button" class="btn btn-danger btn-xs pull-right" style="margin-top: -20px;margin-right: 10px;" id="shanchukaochaxuanxiang">删除考察选项</button>
+                        <button type="button" class="btn btn-success btn-xs pull-right" style="margin-top: -20px;margin-right: 10px;" id="tijiaokaochaxuanxiang">提交考察选项</button>
+                      </div>
+                      <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                          <!-- 基本组成表单开始 -->
+                          <form class="jibenzucheng" id="jibenzucheng">
+                            <div>
+                              <div class="form-group pull-left" style="margin-right: 30px;">
+                                <label for="zuchengxiang">组成项</label>
+                                <select class="form-control" id="zuchengxiang">
+                                  <option selected="selected">考勤</option>
+                                  <option>平时作业</option>
+                                  <option>大作业</option>
+                                  <option>答辩</option>
+                                  <option>期中考试</option>
+                                  <option>期末考试</option>
+                                </select>
+                              </div>
+                              <div class="form-group pull-left" style="width: 220px;margin-right: 30px;">
+                                <label for="bili">比例</label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="bili" placeholder="比例">
+                                  <div class="input-group-addon">%</div>
+                                </div>
+                              </div>
+                              <div class="form-group pull-left" style="width: 220px">
+                                <label for="cishu">次数</label>
+                                <div class="input-group">
+                                  <input type="text" class="form-control" id="cishu" placeholder="次数">
+                                  <div class="input-group-addon">次</div>
+                                </div>
+                              </div>
+                              <div class="form-group pull-left">
+                                <label for="shuoming">详细说明</label>
+                                <textarea class="form-control" rows="3" cols="77" id="shuoming" placeholder="请填写类别的详细说明，并确保所有组成项比例总和满足100%"></textarea>
+                              </div>
+                            </div>
+                          </form>
+                          <!-- 基本组成表单结束 -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            加分选项
+                          </a>
+                        </h4>
+                        <button type="button" class="btn btn-default btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="tianjiajiafenxuanxiang">添加加分选项</button>
+                        <button type="button" class="btn btn-danger btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="shanchujiafenxuanxiang">删除加分选项</button>
+                        <button type="button" class="btn btn-success btn-xs pull-right" style="margin-top: -20px" id="tijiaojiafenxuanxiang">提交加分选项</button>
+                      </div>
+                      <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                          <!-- 表单开始 -->
+                          <form class="jiafenxuanxiang" id="jiafenxuanxiang">
+                            <div class="form-group" style="width: 600px">
+                              <label for="zongshangxianfenshu">个人加分总上限</label>
+                              <div class="input-group">
+                                <input type="text" class="form-control" id="zongshangxianfenshu" placeholder="上限分数">
+                                <div class="input-group-addon">分</div>
+                              </div>
+                              <p class="help-block">温馨提示：加分涉及到最后成绩评定。请设置总上限，以免后期成绩因为加分过多显示不正确。建议加分自定义组成项不超过五项</p>
+                            </div>
+                            <hr class="divider" style="width: 600px">
+                            <!-- 总上限制分界线 -->
+                            <div id="zidingyijiafenxiang">
+                              <div class="form-group pull-left">
+                                <label for="zidingyizuchengxiang">自定义组成项</label>
+                                <input type="text" class="form-control" id="zidingyizuchengxiang" placeholder="自定义组成项" style="width: 600px;">
+                              </div>
+                              <div class="form-group pull-left">
+                                <label for="jiafenshuoming">加分说明</label>
+                                <textarea class="form-control" rows="3" cols="80" id="jiafenshuoming" placeholder="请填写加分的详细说明" style="margin-bottom: 10px;"></textarea>
+                              </div>
+                            </div>
+                          </form>
+                          <!-- 表单结束 -->
+                        </div>
+                      </div>
+                    </div>
+                    <div class="panel panel-default">
+                      <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                          <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            一票否决项
+                          </a>
+                        </h4>
+                        <button type="button" class="btn btn-default btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="tianjiafoujuexuanxiang">添加否决选项</button>
+                        <button type="button" class="btn btn-danger btn-xs pull-right" style="margin-top: -20px;margin-left: 10px;" id="shanchufoujuexuanxiang">删除否决选项</button>
+                        <button type="button" class="btn btn-success btn-xs pull-right" style="margin-top: -20px" id="tijiaofoujuexuanxiang">提交否决选项</button>
+                      </div>
+                      <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                          <form class="jiafenxuanxiang" id="yipiaofoujuexiang">
+                              <div class="form-group pull-left" id="foujuetiaomu">
+                                <label for="foujuexiangneirong">勾选并填写一票否决项的内容</label>
+                                <div class="input-group">
+                                  <span class="input-group-addon">
+                                    <input type="checkbox">
+                                  </span>
+                                  <input type="text" class="form-control" id="foujuexiangneirong" placeholder="否决项内容" style="width: 570px">
+                                </div>
+                              </div>
+                              <p class="help-block" style="width: 610px">温馨提示：一票否决对应考试资格，至少需要填写一个（例如缺勤次数过多），以免考试资格输入过程没有可选选项。</p>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 内部便签切换结束 -->
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class2">
+                  <div class="page-header">
+                    <h3>考核组成</h3>
+                  </div>
+                  <p>通过本系统，老师可以对自己教授的多个课程进行不同的考核设计：基本组成分配课后作业、实训答辩、随堂测试、期末成绩等项的比重分配及各项执行次数。针对不同情况，实行各种加分政策。比如上课回答问题、提出好的创意等。</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class3">
+                  <div class="page-header">
+                    <h3>成绩录入</h3>
+                  </div>
+                  <p>老师根据系统生成的Excel表录入成绩后通过保存提交到数据库，以后的各种查询就直接使用数据库内的数据。在录入成绩的同时，可根据实际情况更改某次作业的比重。通过系统，老师在线发布作业并对作业做出说明（作业发布时间及提交截止时间、作业内容、特殊说明等）</p>
+                </div>
+                <div role="tabpanel" class="tab-pane" id="class4">
+                  <div class="page-header">
+                    <h3>答辩组织</h3>
+                  </div>
+                  <p>实训课中，老师通过系统制定题目并对题目做出说明（题目内容、答辩时间等）。老师结合同学意愿进行分组（抽签、随机、自由组合、指定）并记录，同时以不同的方式（抽签、随机、自由组合、指定）为各个小组分配题目。</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 标签页结束   -->
+      <!-- 尾部开始 -->
+      <hr class="divider">
+      <footer>
+      <p class="text-center">Copyright © 2016 Jelly_Wang All Rights Reserved</p>
+      </footer>
+    </div>
+    <!-- 网站介绍结束 -->
+    
+
+
+
+    
+    <script src="js/jquery-1.12.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

@@ -23,15 +23,53 @@ class Common {
 
     private static $dbName = 'stormtest2';
 
+    private static $smarty;
 
     public static function smarty() {
-        require_once('./smarty/Smarty.class.php');
-        return new Smarty();
+        if (self::$smarty === null) {
+            require_once('./smarty/Smarty.class.php');
+            self::$smarty = new Smarty();
+        }
+
+        return self::$smarty;
+    }
+
+    public static function teacherNav($activeTab = 1) {
+        $teacher = self::teacher()->info();
+        $smarty = self::smarty();
+        $smarty->assign('activeTab', $activeTab);
     }
 
     public static function db() {
         require_once('db.php');
         $db = DB::instance(self::$dbHost, self::$dbUser, self::$dbPass, self::$dbName);
         return $db;
+    }
+
+    public static function teacher() {
+        require_once('teacher.php');
+        return Teacher::instance();
+    }
+
+    public static function assertTeacherLogin($url = 'login.php') {
+        if (!self::teacher()->isLogin()) {
+            self::redirect($url);
+        }
+    }
+
+    public static function redirect($url) {
+        header('Location: '.$url);
+        exit(0);
+    }
+
+    public static function request() {
+        require_once('request.php');
+        return Request::instance();
+    }
+
+    public static function renderError($message) {
+        $smarty = self::smarty();
+        $smarty->assign('message', $message);
+        $smarty->display('error.html');
     }
 }

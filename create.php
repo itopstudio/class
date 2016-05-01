@@ -1,16 +1,15 @@
 <?php
 /** =============================================================================
  * @name index.php
- * @date date 日  5/ 1 16:39:16 2016
+ * @date date 六  4/30 22:59:57 2016
  * @author lancelot<chenjunan@baidu.com>
  * @package 
  * =============================================================================
  */
 require_once('common.php');
 
-if (Common::teacher()->isLogin()) {
-    Common::redirect('create.php');
-}
+//Common::assertTeacherLogin();
+
 $smarty = Common::smarty();
-$smarty->assign('teacherLoginUrl', 'tlogin.php');
-$smarty->display('index.html');
+$smarty->assign('activeTab', 1);
+$smarty->display('create.html');
