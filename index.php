@@ -11,7 +11,7 @@ require_once('common.php');
 $smarty = Common::smarty();
 $db = Common::db();
 
-$res = $db->query('select * from admin');
-print_r($res);
+$arr1 = array('a','b','c');
+$arr2 = array('a' => 1, 'c' => 2, 'd' =>3);
 
-$smarty->display('index.html');
+print_r(array_intersect_key($arr1, $arr2));

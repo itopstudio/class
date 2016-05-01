@@ -13,27 +13,42 @@ class DB {
 
     private $error = null;
 
+    private static $host;
+
+    private static $user;
+
+    private static $passwd;
+
+    private static $dbName;
+
     private function __construct() {
 
     }
 
-    public static function instance() {
+    public static function instance($host, $user, $passwd, $dbName = '') {
         if (self::$instance === null) {
             self::$instance = new DB();
         }
 
+        self::$host = $host;
+        self::$user = $user;
+        self::$passwd = $passwd;
+        self::$dbName = $dbName;
+
         return self::$instance;
     }
 
-    public function open($host, $user, $passwd, $dbName = '') {
+    public function open() {
+        $this->close();
+
         if ($this->db === null) {
-            $this->db = mysqli_connect($host, $user, $passwd);
+            $this->db = mysqli_connect(self::$host, self::$user, self::$passwd);
             if (!$this->db) {
                 $this->db == null;
                 $error = mysqli_error();
             } else {
                 $this->query('set names utf8');
-                $this->useDb($dbName);
+                $this->useDb(self::$dbName);
             }
         }
 
@@ -73,5 +88,12 @@ class DB {
         }
 
         return $res;
+    }
+
+    public function quote($string) {
+        if (!is_string($string)) {
+            return $string;
+        }
+        return mysqli_real_escape_string($this->db, $string);
     }
 }
