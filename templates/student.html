@@ -36,9 +36,9 @@
           </ul>
           <ul class="nav navbar-nav navbar-right ">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">沈同学<span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{$stu[0]}<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">号码：2012210046</a></li>
+                <li><a href="#">号码：{$stu[1]}</a></li>
                 <li><a href="#">级别：学生</a></li>
                 <li role="separator" class="divider"></li>
                 <li><a href="#">重新登陆</a></li>
@@ -54,26 +54,13 @@
       <div class="row">
         <div class="col-md-3 panel panel-default leftList">
           <ul class="nav nav-pills nav-stacked" role="tablist">
+              {section name=tClass loop=$tClassList}
             <li role="presentation" class="active"><a href="#class1" aria-controls="class1" role="tab" data-toggle="tab">
-                <h4 class="list-group-item-heading">通信软件基础</h4>
-                <p class="list-group-item-text">通信工程专业卓越工程师班</p>
-                <p class="list-group-item-text">班级：01914 | 01,02</p>
+                <h4 class="list-group-item-heading">{$tClassList[tClass][0]}</h4>
+                <p class="list-group-item-text">{$tClassList[tClass][1]}</p>
+                <p class="list-group-item-text">{$tClassList[tClass][2]}</p>
             </a></li>
-            <li role="presentation"><a href="#class2" aria-controls="class2" role="tab" data-toggle="tab">
-              <h4 class="list-group-item-heading">通信软件基础实训(1)</h4>
-              <p class="list-group-item-text">通信与信息类班</p>
-              <p class="list-group-item-text">班级：01014 | 10</p>
-            </a></li>
-            <li role="presentation"><a href="#class3" aria-controls="class3" role="tab" data-toggle="tab">
-              <h4 class="list-group-item-heading">通信软件基础实训(2)</h4>
-              <p class="list-group-item-text">通信学院IT精英班</p>
-              <p class="list-group-item-text">班级：01913 | 03</p>
-            </a></li>
-            <li role="presentation"><a href="#class4" aria-controls="class4" role="tab" data-toggle="tab">
-              <h4 class="list-group-item-heading">通信软件开发应用实训</h4>
-              <p class="list-group-item-text">信息工程班</p>
-              <p class="list-group-item-text">班级：01413 | 01</p>
-            </a></li>
+              {/section}
           </ul>
         </div>
         <div class="col-md-9">
@@ -158,7 +145,7 @@
                               <blockquote style="margin-bottom: 20px">
                                 <p>平时作业题目以及详情</p>
                                 <footer>
-                                  题目：论知识产权在当今社会的重要性。要求：字数在一千字以上，上交以纸质的形式,上交地点在逸夫楼201室。
+                                  {$pszyList[0]}
                                 </footer>
                               </blockquote>
                               <table class="table table-bordered table-hover table-striped" style="margin-bottom: 20px">
@@ -173,11 +160,11 @@
                                  </thead>
                                  <tbody>
                                    <tr>
-                                     <td>10</td>
+                                     <td>{$pszyList[4]}</td>
                                      <td>王华华</td>
-                                     <td>2016-04-23</td>
-                                     <td>2016-05-23</td>
-                                     <td>线上提交</td>
+                                     <td>{$pszyList[3]}</td>
+                                     <td>{$pszyList[1]}</td>
+                                     <td>{$pszyList[6]}</td>
                                    </tr>
                                  </tbody>
                               </table>

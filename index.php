@@ -13,4 +13,5 @@ if (Common::teacher()->isLogin()) {
 }
 $smarty = Common::smarty();
 $smarty->assign('teacherLoginUrl', 'tlogin.php');
+$smarty->assign('studentLoginUrl', 'slogin.php');
 $smarty->display('index.html');

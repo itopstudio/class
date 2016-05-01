@@ -182,17 +182,17 @@
             <h4 class="modal-title">学生登入</h4>
           </div>
           <div class="modal-body">
-            <form class="form-horizontal">
+            <form class="form-horizontal" method="post" action="{$studentLoginUrl}">
               <div class="form-group">
                 <label for="inputStudentUserName" class="col-sm-2 control-label">用户名</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputStudentUserName" placeholder="请输入用户名">
+                  <input type="text" class="form-control" id="inputStudentUserName" name="student[id]" placeholder="请输入用户名">
                 </div>
               </div>
               <div class="form-group">
                 <label for="inputStudentPassword" class="col-sm-2 control-label">密码</label>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control" id="inputStudentPassword" placeholder="请输入密码">
+                  <input type="password" class="form-control" id="inputStudentPassword" name="student[password]"  placeholder="请输入密码">
                 </div>
               </div>
               <div class="form-group">
@@ -204,12 +204,12 @@
                   </div>
                 </div>
               </div>
-            </form>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
             <button type="submit" class="btn btn-primary">登陆</button>
           </div>
+            </form>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
     </div><!-- /.modal -->

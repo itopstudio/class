@@ -7,21 +7,21 @@
  * =============================================================================
  */
 class Common {
-/*    private static $dbHost = 'cp01-public.epc:8806';
+    private static $dbHost = 'cp01-public.epc:8806';
 
     private static $dbUser = 'dftroot';
 
     private static $dbPass = 'DFT@TAlrB=xyBzQyXUtElmR6kltW';
 
     private static $dbName = 'stormtest2';
- */
-    private static $dbHost = 'localhost';
+
+/*    private static $dbHost = 'localhost';
 
     private static $dbUser = 'root';
 
     private static $dbPass = '';
 
-    private static $dbName = 'stormtest2';
+    private static $dbName = 'stormtest2';*/
 
     private static $smarty;
 
@@ -71,5 +71,18 @@ class Common {
         $smarty = self::smarty();
         $smarty->assign('message', $message);
         $smarty->display('error.html');
+    }
+
+    //Student Start
+
+    public static function student(){
+        require_once('student.php');
+        return Student::instance();
+    }
+
+    public static function assertStudentLogin($url = 'login.php') {
+        if (!self::teacher()->isLogin()) {
+            self::redirect($url);
+        }
     }
 }

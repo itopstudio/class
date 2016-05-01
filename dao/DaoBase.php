@@ -78,7 +78,7 @@ class DaoBase {
             return '';
         }
 
-        $sql = 'insert into '.$table. '(';
+        $sql = 'insert into '.$this->table. '(';
         $values = array();
         foreach ($data as $key => $value) {
             $sql .= '`'.$key.'`,';
@@ -129,5 +129,9 @@ class DaoBase {
         }
 
         return $sql;
+    }
+
+    public function getDb(){
+        return $this->db;
     }
 }
