@@ -29,4 +29,40 @@ class DaoTeacher extends DaoBase {
             'teacher_password=' => $passwd,
         ));
     }
+
+    /**
+     * 获取教师授课列表
+     * @param $teacherId
+     * @return array
+     */
+    public function getTeacherTclassList($teacherId) {
+        if(!empty($teacherId)) {
+            $sql = 'SELECT * FROM tclass,course WHERE tclass_teacher_ID='.$teacherId .' AND tclass_course_no=Cno';
+            $res = $this->getDb()->query($sql);
+            if($res) {
+                return $res;
+            }
+        }
+        return array();
+    }
+
+    /**
+     * 获取授课信息
+     * @param $tClassNo
+     * @return array
+     */
+    public function getTclassData($tClassNo) {
+        if(!empty($tClassNo)) {
+            $sql = 'SELECT * FROM tclass,course WHERE tclass_class_no='.$tClassNo.' AND tclass_course_no=Cno';
+            $res = $this->getDb->query($sql);
+            if($res) {
+                return $res[0];
+            }
+        }
+        return array();
+    }
+
+    public function getTclass() {
+
+    }
 }

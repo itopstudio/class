@@ -16,8 +16,11 @@ class Teacher {
 
     private static $instance;
 
+    private $dao;
+
     private function __construct() {
         $this->session = isset($_SESSION[$this->sessionKey]) ? $_SESSION[$this->sessionKey] : array();
+        $this->dao = new DaoTeacher();
     }
 
     public function instance() {
@@ -51,5 +54,17 @@ class Teacher {
 
     public function info() {
         return $this->session;
+    }
+
+    /**
+     * 老师页面
+     */
+    public function teacherTclassList(){
+        $teacherId = '019942';
+        return $this->dao->getTeacherTclassList($teacherId);
+    }
+
+    public function getTclassData($tclassNo) {
+
     }
 }

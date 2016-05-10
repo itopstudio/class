@@ -53,6 +53,13 @@ class Student {
         return $this->session;
     }
 
+    /**
+     *
+     * 学生页面数据获取
+     */
+    /**
+     * @return mixed
+     */
     public function getStudentTclassList(){
         $dao = new DaoStudent();
         $res = $dao->getStudentTclassList($this->session[1]);
@@ -66,5 +73,15 @@ class Student {
 
     public function getTopic($topicNo){
         return $this->dao->getTopicData('', $topicNo);
+    }
+
+    /**
+     *
+     */
+    public function getCourseAllExplainData(){
+/*        $data = array(
+            ''
+        );*/
+        $data = $this->dao->getCourseExplain('');
     }
 }

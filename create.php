@@ -8,8 +8,19 @@
  */
 require_once('common.php');
 
+if (!Common::teacher()->isLogin()) {
+    Common::redirect('index.php');
+}
+$request = Common::request();
+$currentTclassNo = $request->getQuery('tclass_no');
+if(!empty($currentTclassNo)) {
+    $currentTclassData = '';
+}
 //Common::assertTeacherLogin();
-
+//教师授课列表
+$teacherOwnTclassList = Common::teacher()->teacherTclassList();
 $smarty = Common::smarty();
 $smarty->assign('activeTab', 1);
+$smarty->assign('tClassList', $teacherOwnTclassList);
+
 $smarty->display('create.html');

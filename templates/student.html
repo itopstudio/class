@@ -7,6 +7,12 @@
     <title>教学过程管理系统 学生页面</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/student.css" rel="stylesheet">
+      <script src="js/jquery-1.12.3.min.js"></script>
+      <!--webuploader-->
+      <link rel="stylesheet" type="text/css" href="js/webuploader/webuploader.css">
+      <!--引入JS-->
+      <script type="text/javascript" src="js/webuploader/webuploader.js"></script>
+
     <!--[if lt IE 9]>
       <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
@@ -246,8 +252,14 @@
                                  </tbody>
                               </table>
                               <div class="form-group">
-                                  <label for="InputFile">上传作业</label>
-                                  <input type="file" id="InputFile">
+                                  <div id="uploader" class="wu-example">
+                                      <!--用来存放文件信息-->
+                                      <div id="thelist" class="uploader-list"></div>
+                                      <div class="btns">
+                                          <div id="picker">选择文件</div>
+                                          <button id="ctlBtn" class="btn btn-default">开始上传</button>
+                                      </div>
+                                  </div>
                                   <p class="help-block">如若任课老师要求，请将作业上传在此处。未在截至时间之前上传自动视为未提交，文件命名格式（学号+姓名）</p>
                               </div>
                               <hr class="divider">
@@ -698,10 +710,8 @@
     
 
 
-
-    
-    <script src="js/jquery-1.12.3.min.js"></script>
     <script src="js/student.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/uploader.js"></script>
   </body>
 </html>

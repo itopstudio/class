@@ -17,6 +17,16 @@ class DaoStudent extends DaoBase{
         'student_class_no',
         'student_password'
     );
+    //作业类型
+    private static $topicTypes = array(
+        'normalTask'=>'平时作业',   //平时作业
+        'largeTask',    //大作业
+        'defence',
+        'attendance',
+        'halfTest',
+        'finalTest',
+        'bonus'
+    );
 
     public function __construct()
     {
@@ -44,13 +54,38 @@ class DaoStudent extends DaoBase{
     }
 
     /**
-     * Get Topics
-     * @param string $type
+     * 获取课程考核方式
+     * @param $courseNo
+     * @return array
      */
-    public function getTopicList($type=''){
-        $sql = 'SELECT * FROM topic WHERE topic_type="平时作业" AND topic_tclass_no="A011518756"';
-        $res =  $this->getDb()->query($sql);
-        return $res[0];
+    public function getCourseExplain($courseNo){
+        if(!empty($courseNo)){
+            $sql = 'SELECT
+	                  DD_Cexplain_name,assess_Course_no,Cexplain_proportion,Cexplain_time,Cexplain_explain
+                    FROM
+                      dd,assess,cexplain
+                    WHERE
+                    DD_no=Cexplain_dd_no AND assess_no=Cexplain_assess_no
+                    AND assess_Course_no='.$courseNo;
+            $res = $this->getDb()->query($sql);
+            return $res;
+        }
+        return array();
+    }
+    /**
+     * Get topics
+     * @param string $type
+     * @param string $topicTclassNo
+     * @return array
+     */
+    public function getTopicList($type='', $topicTclassNo=''){
+        if(!empty($type) && !empty($topicTclassNo)) {
+            $sql = 'SELECT * FROM topic WHERE topic_type='.$type.' AND topic_tclass_no='.$topicTclassNo;
+            $res = $this->getDb()->query($sql);
+            return $res[0];
+        }else{
+            return array();
+        }
     }
 
     /**
@@ -58,15 +93,6 @@ class DaoStudent extends DaoBase{
      * @param string $topicId
      */
     public function getTopicData($type='', $topicNo=''){
-        $topicTypes = array(
-            'normalTask',   //平时作业
-            'largeTask',    //大作业
-            'defence',
-            'attendance',
-            'halfTest',
-            'finalTest',
-            'bonus'
-        );
         $typeNo = '';
 
         $sql = 'SELECT * FROM topic WHERE topic_no='.$topicNo;
