@@ -71,7 +71,7 @@ class Student {
         return $dao->getTopicList();
     }
 
-    public function getTopic($topicNo){
+    public function getTopic($topicNo = ''){
         return $this->dao->getTopicData('', $topicNo);
     }
 

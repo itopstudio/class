@@ -134,4 +134,26 @@ class DaoBase {
     public function getDb(){
         return $this->db;
     }
+
+    /**
+     * 通过自写sql获取数据
+     * @param $sql
+     * @return array|bool|mixed|mysqli_result
+     */
+    public function getRowsBySql($sql) {
+        $res = $this->getDb()->query($sql);
+        if($res) {
+            return $res;
+        }else {
+            return array();
+        }
+    }
+
+    /**
+     * 修改表名便于操作其它表
+     * @param $table
+     */
+    public function setTable($table) {
+        $this->table = $table;
+    }
 }

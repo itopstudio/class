@@ -19,8 +19,10 @@ if(!empty($currentTclassNo)) {
 //Common::assertTeacherLogin();
 //教师授课列表
 $teacherOwnTclassList = Common::teacher()->teacherTclassList();
+$courseExplainDDList = Common::teacher()->getCourseExplainDD();
 $smarty = Common::smarty();
 $smarty->assign('activeTab', 1);
 $smarty->assign('tClassList', $teacherOwnTclassList);
+$smarty->assign('ddList', $courseExplainDDList);
 
 $smarty->display('create.html');

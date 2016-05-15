@@ -64,7 +64,70 @@ class Teacher {
         return $this->dao->getTeacherTclassList($teacherId);
     }
 
+    /**
+     * 获取课程考核数据字典列表
+     * @return array
+     */
+    public function getCourseExplainDD() {
+        $ddDataType = 2;
+        return $this->dao->getDDDataList($ddDataType);
+    }
+
+
     public function getTclassData($tclassNo) {
 
+    }
+
+    /**
+     * 创建
+     */
+
+
+    public function createBaseData($courseNo = '', $baseData = '') {
+        $result = '';
+        if(!empty($baseData)) {
+        }
+        return $result;
+    }
+
+    /**
+     * 添加加分项
+     * @param string $tclassNo
+     * @param string $bonusOption
+     * @return string
+     */
+    public function createBonusOption($tclassNo = '', $bonusOption = '') {
+        $result = '';
+        if(!empty($bonusOption)) {
+
+        }
+        return $result;
+    }
+
+    /**
+     * 添加一票否决选项
+     * @param string $tclassNo
+     * @param string $vetoPower
+     * @return string
+     */
+    public function createVetoPower($tclassNo = '', $vetoPower = '') {
+        $result = '';
+        if(!empty($vetoPower)) {
+
+        }
+        return $result;
+    }
+
+    /**
+     * @param string $tclassNo
+     * @param string $courseNo
+     * @return array|string
+     */
+    public function getCourseAllStudentGrades($tclassNo = '', $courseNo = '') {
+        return $this->dao->getTclassStudentGrades($tclassNo, $courseNo);
+        if(!empty($tclassNo)) {
+
+        }
+        return '';
     }
 }
