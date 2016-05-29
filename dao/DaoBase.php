@@ -119,7 +119,6 @@ class DaoBase {
     }
 
     private function parseCondition($where) {
-        print_r($where);
         $sql = ' where ';
         $items = array();
         if (is_string($where)) {
@@ -133,7 +132,6 @@ class DaoBase {
             $sql = '';
         }
         $sql = $sql.join(' AND ', $items);
-        echo $sql;
         return $sql;
     }
 

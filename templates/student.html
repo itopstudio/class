@@ -176,9 +176,12 @@
                                   <input type="hidden" value="{$zyList[zydetail][9]}" class="judge-no">
                                   <!--用来存放文件信息-->
                                   <div id="up-list{$zyList[zydetail][0]}" class="uploader-list">
+                                    {if $zyList[zydetail][10] != ''}
                                     <a href="./{$zyList[zydetail][10]}">
                                       <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-file"></span> 下载已上传附件</button>
                                     </a>
+                                    {else}
+                                    {/if}
                                   </div>
                                   <div class="btns">
                                     <div id="picker{$zyList[zydetail][0]}" class="picker picker-div">选择文件</div>
