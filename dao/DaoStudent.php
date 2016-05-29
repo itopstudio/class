@@ -35,9 +35,8 @@ class DaoStudent extends DaoBase{
 
     public function getByAuth($id, $passwd) {
         return $this->getRow(array(
-            'student_ID=' => $id,
-            'and',
-            'student_password=' => $passwd,
+            'student_ID' => $id,
+            'student_password' => $passwd,
         ));
     }
 
@@ -47,56 +46,52 @@ class DaoStudent extends DaoBase{
      */
     public function getStudentTclassList($stuId)
     {
-        $sql = 'SELECT Cname,Tclass_specialty,Tclass_class_no FROM course,tclass,ref_tclass_student
+        $sql = 'SELECT Tclass_no,Cname,Tclass_specialty,Tclass_class_no FROM course,tclass,ref_tclass_student
                 WHERE ref_T_S_student_ID='.$stuId.' AND ref_T_S_Tclass_no=Tclass_no AND tclass_course_no=Cno';
         $res = $this->getDb()->query($sql);
         return $res;
     }
 
+
     /**
-     * 获取课程考核方式
-     * @param $courseNo
-     * @return array
-     */
-    public function getCourseExplain($courseNo){
-        if(!empty($courseNo)){
-            $sql = 'SELECT
-	                  DD_Cexplain_name,assess_Course_no,Cexplain_proportion,Cexplain_time,Cexplain_explain
-                    FROM
-                      dd,assess,cexplain
-                    WHERE
-                    DD_no=Cexplain_dd_no AND assess_no=Cexplain_assess_no
-                    AND assess_Course_no='.$courseNo;
-            $res = $this->getDb()->query($sql);
-            return $res;
-        }
-        return array();
-    }
-    /**
-     * Get topics
-     * @param string $type
      * @param string $topicTclassNo
-     * @return array
+     * @param string $studentId
+     * @return array|bool|mixed|mysqli_result
      */
-    public function getTopicList($type='', $topicTclassNo=''){
-        if(!empty($type) && !empty($topicTclassNo)) {
-            $sql = 'SELECT * FROM topic WHERE topic_type='.$type.' AND topic_tclass_no='.$topicTclassNo;
-            $res = $this->getDb()->query($sql);
-            return $res[0];
+    public function getTopicList($topicTclassNo='', $studentId=''){
+        if(!empty($topicTclassNo)) {
+            $sql = 'SELECT topic_no,topic_type,topic_releasetime,topic_deadline,topic_content,topic_fullmark,topic_proportion,topic_submission_method,judge_ID,judge_no,topic_file_url,judge_grades,judge_submit FROM topic,judge WHERE topic_tclass_no=\''.$topicTclassNo.'\' AND judge_ID=\''.$studentId.'\' AND topic_no=topic_topic_no';
+            $res = $this->getRowsBySql($sql);
+            if($res) {
+                return $res;
+            }
         }else{
-            return array();
+            return '';
         }
     }
 
     /**
-     * @param string $type
-     * @param string $topicId
+     * @param string $postJudgeNo
+     * @param string $topicFileUrl
+     * @param string $judgeId
+     * @return bool|mixed|mysqli_result|string
      */
-    public function getTopicData($type='', $topicNo=''){
-        $typeNo = '';
-
-        $sql = 'SELECT * FROM topic WHERE topic_no='.$topicNo;
-        $res = $this->getDb()->query($sql);
-        return $res[0];
+    public function updateStudentJudgeDataToDb($postJudgeNo = '', $topicFileUrl = '', $judgeId = '') {
+        $judge = array();
+        $table = 'judge';
+        if(!empty($postJudgeNo) && !empty($topicFileUrl)) {
+            $judge['judge_submit'] = 1;
+            $judge['topic_file_url'] = $topicFileUrl;
+            $where = array(
+                'judge_no'=>$postJudgeNo,
+                'judge_ID'=>$judgeId
+            );
+            $this->setTable($table);
+            $res = $this->update($judge, $where);
+            if ($res) {
+                return $res;
+            }
+        }
+        return '';
     }
 }

@@ -79,12 +79,39 @@ $(function(){
 			$content2.children('#foujuetiaomu').last().remove();
 		});
 	})();
+
+	//提交基本组成项
+	(function () {
+		var $subBtn1 = $('#tijiaokaochaxuanxiang');
+		$subBtn1.on('click', function () {
+			var currentTclassNo = $('#currentTclassNo').val();
+			var $biliList = $('.bili');
+			var $cishuList = $('.cishu');
+			var $shuomingList = $('.shuoming');
+			var $zcxList = $('.zcx');
+			var jbzcxList = new Array();
+			//拼接
+			$zcxList.each(function (index) {
+				var item = new Object();
+				item.zcx = this.value;
+				item.bili = $biliList[index].value;
+				item.cishu = $cishuList[index].value;
+				item.shuoming = $shuomingList[index].value;
+				jbzcxList.push(JSON.stringify(item));
+			});
+			$.post('teacher_create_do.php?do_type=jbzc&tclass_no='+currentTclassNo, {data: JSON.stringify(jbzcxList)}, function (status) {
+				var msg = '操作失败！';
+				if(status == 1){
+					msg = '操作成功！';
+				}
+				$('#status-tip').text(msg);
+			});
+			return false;
+		});
+
+	})();
 	
 });
-
-
-
-
 
 
 

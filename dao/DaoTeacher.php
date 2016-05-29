@@ -24,9 +24,8 @@ class DaoTeacher extends DaoBase {
 
     public function getByAuth($id, $passwd) {
         return $this->getRow(array(
-            'teacher_ID=' => $id,
-            'and',
-            'teacher_password=' => $passwd,
+            'teacher_ID' => $id,
+            'teacher_password' => $passwd,
         ));
     }
 
@@ -72,31 +71,14 @@ class DaoTeacher extends DaoBase {
     }
 
     /**
-     * 提交数据
-     */
-
-    /**
-     * 添加基础组成项到数据库
-     * @param string $courseNo
      * @param string $insertData
-     * @return string
+     * @return bool|mixed|mysqli_result|string
      */
-    public function createBaseDataToDb($courseNo = '', $insertData = '') {
-        if(empty($courseNo)) {
-            return '';
-        }
-        $sql = 'SELECT assess_no FROM assess WHERE assess_Course_no='.$courseNo;
-        $res = $this->getRowsBySql($sql);
-        if(isset($res[0]) && !empty($insertData)) {
-            //添加Cexplain_assess_no的值
-            foreach ($insertData as $key=>$value) {
-                $value['Cexplain_assess_no'] = $res[0][0];
-            }
-            $insertTable = 'cexplain';
-            $this->setTable($insertTable);
-            if($this->insert($insertData)) {
-                return true;
-            }
+    public function createBaseDataToDb($insertData = '') {
+        $table = 'Cexplain';
+        if(!empty($insertData)) {
+            $this->setTable($table);
+            return $this->insert($insertData);
         }
         return '';
     }
@@ -154,6 +136,12 @@ class DaoTeacher extends DaoBase {
             //ToDo
         }
         return $resArr;
+    }
+
+    public function getExecuteData($tclassNo='') {
+        if(!empty($tclassNo)) {
+            
+        }
     }
 
 }

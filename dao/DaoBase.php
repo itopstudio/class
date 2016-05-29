@@ -39,29 +39,25 @@ class DaoBase {
     }
 
     public function insert($data) {
-        $sql = $this->toInsert(array_intersect_key($data, array_flip($this->fields)));
+        $sql = $this->toInsert($data);
         $res = $this->db->query($sql);
-
         return $res;
     }
 
     public function update($data, $where) {
         $sql = $this->toUpdate($data, $where);
         $res = $this->db->query($sql);
-
         return $res;
     }
 
     public function delete($where) {
         $sql = $this->toDelete($where);
         $res = $this->db->query($sql);
-
         return $res;
     }
 
     public function toSelect($where = '', $append = '') {
         $sql = 'select '.join(',', $this->fields).' from '.$this->table;
-
         if (!empty($where)) {
             $sql .= $this->parseCondition($where);
         }
@@ -69,7 +65,6 @@ class DaoBase {
         if (!empty($append)) {
             $sql .= $append;
         }
-        
         return $sql;
     }
 
@@ -77,16 +72,29 @@ class DaoBase {
         if (empty($data)) {
             return '';
         }
-
-        $sql = 'insert into '.$this->table. '(';
-        $values = array();
-        foreach ($data as $key => $value) {
-            $sql .= '`'.$key.'`,';
-            $values[] = $this->db->quote($value);
+        $tmpData = isset($data[0])? $data[0]:$data;
+        $tmpDataArr = array();
+        if(!isset($data[0])) {
+            $tmpDataArr[0] = $data;
+        } else {
+            $tmpDataArr = $data;
         }
-
-        $sql = substr($sql, 0, strlen($sql) - 1).') values('.join(',', $values).')';
-
+        $tmpDataKeys = array_intersect_key($tmpData, array_flip($this->fields));
+        $sql = 'insert into '.$this->table. '(';
+        foreach ($tmpDataKeys as $key => $field) {
+            $sql .= '`'.$key.'`,';
+        }
+        $values = array();
+        foreach ($tmpDataArr as $tmpKey => $value1) {
+            if(is_array($value1)) {
+                $items = array();
+                foreach ($value1 as $value2) {
+                    $items[] = $this->db->quote($value2);
+                }
+                $values[] = '('.join(',', $items).')';
+            }
+        }
+        $sql = substr($sql, 0, strlen($sql) - 1).') values'.join(',', $values);
         return $sql;
     }
 
@@ -98,11 +106,10 @@ class DaoBase {
         $sql = 'update '.$this->table.' set ';
         $sets = array();
         foreach ($data as $key => $value) {
-            $sets[] = $key.' = '.$this->db->quote($value);
+            $sets[] = $key.'=\''.$this->db->quote($value).'\'';
         }
         $sql .= join(',', $sets);
         $sql .= $this->parseCondition($where);
-
         return $sql;
     }
 
@@ -112,22 +119,21 @@ class DaoBase {
     }
 
     private function parseCondition($where) {
+        print_r($where);
         $sql = ' where ';
+        $items = array();
         if (is_string($where)) {
             $sql .= $where;
         } else if (is_array($where)) {
             foreach ($where as $key => $data) {
-                if (is_string($key)) {
-                    $sql .= $key.' ';
-                } 
                 $value = $this->db->quote($data);
-                
-                $sql .= $value.' ';
+                $items[] = $key.'='.'\''.$value.'\'';
             }
         } else {
             $sql = '';
         }
-
+        $sql = $sql.join(' AND ', $items);
+        echo $sql;
         return $sql;
     }
 
@@ -154,6 +160,62 @@ class DaoBase {
      * @param $table
      */
     public function setTable($table) {
-        $this->table = $table;
+        $tables = Common::tables();
+        if($tables->isTable($table)) {
+            $this->table = $table;
+            $this->fields = $tables->getTableFields($table);
+        }
+    }
+
+    /**
+     * 获取课程考核方式
+     * @param $courseNo
+     * @return array
+     */
+    public function getCourseExplain($courseNo){
+        if(!empty($courseNo)){
+            $sql = 'SELECT
+	                  DD_Cexplain_name,assess_Course_no,Cexplain_proportion,Cexplain_time,Cexplain_explain
+                    FROM
+                      dd,assess,cexplain
+                    WHERE
+                    DD_no=Cexplain_dd_no AND assess_no=Cexplain_assess_no
+                    AND assess_Course_no='.$courseNo;
+            $res = $this->getRowsBySql($sql);
+            return $res;
+        }
+        return array();
+    }
+
+    /**
+     * @param $tclassNo
+     * @return string
+     */
+    public function getCourseExplainByTclassNo($tclassNo) {
+        if(!empty($tclassNo)) {
+            $sql = 'SELECT tclass_course_no FROM tclass WHERE Tclass_no=\''.$tclassNo.'\'';
+            $res = $this->getRowsBySql($sql);
+            if($res) {
+                return $this->getCourseExplain($res[0][0]);
+            }
+        }
+        return '';
+    }
+
+    /**
+     *
+     * @param string $tclassNo
+     * @return array|bool|mixed|mysqli_result|string
+     */
+    public function getTclassByPK($tclassNo = '') {
+        if(!empty($tclassNo)) {
+            $sql = 'SELECT * FROM tclass WHERE Tclass_no=\''.$tclassNo.'\'';
+            $res = $this->getRowsBySql($sql);
+            if($res) {
+                return $res;
+            }
+        } else {
+            return '';
+        }
     }
 }

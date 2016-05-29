@@ -7,21 +7,21 @@
  * =============================================================================
  */
 class Common {
-    private static $dbHost = 'cp01-public.epc:8806';
+/*    private static $dbHost = 'cp01-public.epc:8806';
 
     private static $dbUser = 'dftroot';
 
     private static $dbPass = 'DFT@TAlrB=xyBzQyXUtElmR6kltW';
 
-    private static $dbName = 'stormtest2';
+    private static $dbName = 'stormtest2';*/
 
-/*    private static $dbHost = 'localhost';
+    private static $dbHost = 'localhost';
 
     private static $dbUser = 'root';
 
-    private static $dbPass = '';
+    private static $dbPass = 'root';
 
-    private static $dbName = 'stormtest2';*/
+    private static $dbName = 'wxl';
 
     private static $smarty;
 
@@ -85,4 +85,43 @@ class Common {
             self::redirect($url);
         }
     }
+    
+    public static function tables() {
+        require_once ('./dao/Tables.php');
+        return Tables::instance();
+    }
+
+    /**
+     * Check proportion's sum is 100;
+     * @param string $proportionArr
+     * @return int|string
+     */
+    public static function checkProportion($proportionArr = '') {
+        $sum = 0;
+        if(!empty($proportionArr) && is_array($proportionArr)) {
+            foreach ($proportionArr as $value) {
+                if(!is_numeric($value)) {
+                    return 0;
+                }
+                $sum+=$value;
+            }
+            return $sum<=100 ? $sum : 0;
+        } else {
+            return 0;
+        }
+
+    }
+
+    /**
+     * 发送操作结果
+     * @param string $status
+     */
+    public static function sendAjaxStatus($status = '') {
+        $result = array('status'=>1);
+        if(empty($status) && $status == false) {
+            $result['status'] = 0;
+        }
+        echo json_encode($result);
+    }
+    
 }

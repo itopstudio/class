@@ -14,20 +14,32 @@ $doTypes = array(
 );
 $doType = $request->getQuery('do_type');
 $tclassNo = $request->getQuery('tclass_no');
+//基本组成 ajax json
+$postJson = $request->getPost('data');
+$postData = json_decode($postJson);
+foreach ($postData as $key => $item) {
+/*    $tmpItem['zcx'] = $item->zcx;
+    $tmpItem['bili'] = $item->bili;
+    $tmpItem['cishu'] = $item->cishu;
+    $tmpItem['shuoming'] = $s*/
+    $postData[$key] = (array) json_decode($item);
+}
+$result = false;
 if(isset($doType) && isset($tclassNo)) {
     $doTypeIndex = array_search($doType, $doTypes);
-    $formData = $request->getPost($doType);
     switch ($doTypeIndex) {
         case 0:
-            Common::teacher()->createBaseData($tclassNo, $formData);
+            $result = Common::teacher()->createBaseData($tclassNo, $postData);
             break;
         case 1:
-            Common::teacher()->createBonusOption($tclassNo, $formData);
+            $result = Common::teacher()->createBonusOption($tclassNo, $postData);
             break;
         case 2:
-            Common::teacher()->createVetoPower($tclassNo, $formData);
+            $result = Common::teacher()->createVetoPower($tclassNo, $postData);
             break;
         default:
-            echo json_decode(array('status'=>0));
+            $result = false;
     }
 }
+//发送操作结果
+Common::sendAjaxStatus($result);

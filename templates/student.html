@@ -61,10 +61,10 @@
         <div class="col-md-3 panel panel-default leftList">
           <ul class="nav nav-pills nav-stacked" role="tablist">
               {section name=tClass loop=$tClassList}
-            <li role="presentation" class="active"><a href="#class1" aria-controls="class1" role="tab" data-toggle="tab">
-                <h4 class="list-group-item-heading">{$tClassList[tClass][0]}</h4>
-                <p class="list-group-item-text">{$tClassList[tClass][1]}</p>
+            <li role="presentation" class="active"><a href="?tclass_no={$tClassList[tClass][0]}" aria-controls="class1">
+                <h4 class="list-group-item-heading">{$tClassList[tClass][1]}</h4>
                 <p class="list-group-item-text">{$tClassList[tClass][2]}</p>
+                <p class="list-group-item-text">{$tClassList[tClass][3]}</p>
             </a></li>
               {/section}
           </ul>
@@ -72,8 +72,7 @@
         <div class="col-md-9">
           <div class="panel panel-default">
             <div class="panel-heading">
-            您正在编辑：通信软件基础（通信工程专业卓越工程师班）班级：01914 | 01,02
-            <span class="pull-right">您的该科总成绩: <strong>88</strong> 分</span>
+            您正在编辑：
             </div>
             <div class="panel-body rightContent">
               <div class="tab-content rightContentTab">
@@ -86,34 +85,34 @@
                         <h4 class="list-group-item-heading">次数</h4>
                       </div>
                       <li role="presentation" class="active"><a href="#pingshizuoye" aria-controls="pingshizuoye" role="tab" data-toggle="tab" >
-                        <h4 class="list-group-item-heading">平时作业</h4>
-                        <p class="list-group-item-text">5%</p>
-                        <p class="list-group-item-text">4次</p>
+                        <h4 class="list-group-item-heading">作业</h4>
+                        <p class="list-group-item-text">{$courseExplainList['zy'][2]}%</p>
+                        <p class="list-group-item-text">{$courseExplainList['zy'][3]}次</p>
                       </a></li>
                       <li role="presentation"><a href="#dazuoye" aria-controls="dazuoye" role="tab" data-toggle="tab" >
-                        <h4 class="list-group-item-heading">大作业</h4>
-                        <p class="list-group-item-text">15%</p>
-                        <p class="list-group-item-text">2次</p>
+                        <h4 class="list-group-item-heading">随堂测试</h4>
+                        <p class="list-group-item-text">{$courseExplainList['stzy'][2]}%</p>
+                        <p class="list-group-item-text">{$courseExplainList['stzy'][3]}次</p>
                       </a></li>
                       <li role="presentation"><a href="#dabian" aria-controls="dabian" role="tab" data-toggle="tab">
                         <h4 class="list-group-item-heading">答辩</h4>
-                        <p class="list-group-item-text">20%</p>
-                        <p class="list-group-item-text">2次</p>
+                        <p class="list-group-item-text">{$courseExplainList['db'][2]}%</p>
+                        <p class="list-group-item-text">{$courseExplainList['db'][3]}次</p>
                       </a></li>
                       <li role="presentation"><a href="#kaoqin" aria-controls="kaoqin" role="tab" data-toggle="tab">
                         <h4 class="list-group-item-heading">考勤</h4>
-                        <p class="list-group-item-text">20%</p>
-                        <p class="list-group-item-text">4次</p>
+                        <p class="list-group-item-text">{$courseExplainList['kq'][2]}%</p>
+                        <p class="list-group-item-text">{$courseExplainList['kq'][3]}次</p>
                       </a></li>
                       <li role="presentation"><a href="#banqikaoshi" aria-controls="banqikaoshi" role="tab" data-toggle="tab">
-                        <h4 class="list-group-item-heading">半期考试</h4>
-                        <p class="list-group-item-text">20%</p>
-                        <p class="list-group-item-text">2次</p>
+                        <h4 class="list-group-item-heading">期中考试</h4>
+                        <p class="list-group-item-text">{$courseExplainList['qzks'][2]}%</p>
+                        <p class="list-group-item-text">{$courseExplainList['qzks'][3]}次</p>
                       </a></li>
                       <li role="presentation"><a href="#qimokaoshi" aria-controls="qimokaoshi" role="tab" data-toggle="tab">
                         <h4 class="list-group-item-heading">期末考试</h4>
-                        <p class="list-group-item-text">20%</p>
-                        <p class="list-group-item-text">1次</p>
+                        <p class="list-group-item-text">{$courseExplainList['qmks'][2]}%</p>
+                        <p class="list-group-item-text">{$courseExplainList['qmks'][3]}次</p>
                       </a></li>
                       <li role="presentation"><a href="#kechengjiafen" aria-controls="kechengjiafen" role="tab" data-toggle="tab">
                         <h4 class="list-group-item-heading">课程加分</h4>
@@ -127,31 +126,27 @@
                         <div>
                           <!-- Nav tabs -->
                           <ul class="nav nav-pills cishugoucheng " role="tablist">
-                            <li role="presentation" class="active"><a href="#pingshizuoyeNoFirst" aria-controls="pingshizuoyeNoFirst" role="tab" data-toggle="tab">
-                              <p class="list-group-item-text">第一次</p>
-                              <p class="list-group-item-text">25%</p>
+                            {section name=zy loop=$zyList}
+                            {if $smarty.section.loop.index == 0}
+                            <li role="presentation" class="active"><a href="#zy{$zyList[zy][0]}" aria-controls="pingshizuoyeNoFirst" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第{$smarty.section.loop.index+1}次</p>
                             </a></li>
-                            <li role="presentation"><a href="#pingshizuoyeNoSecond" aria-controls="pingshizuoyeNoSecond" role="tab" data-toggle="tab">
-                              <p class="list-group-item-text">第二次</p>
-                              <p class="list-group-item-text">25%</p>
+                            {else}
+                            <li role="presentation"><a href="#zy{$zyList[zy][0]}" aria-controls="pingshizuoyeNoFirst" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第{$smarty.section.loop.index+1}次</p>
                             </a></li>
-                            <li role="presentation"><a href="#pingshizuoyeNoThird" aria-controls="pingshizuoyeNoThird" role="tab" data-toggle="tab">
-                              <p class="list-group-item-text">第三次</p>
-                              <p class="list-group-item-text">25%</p>
-                            </a></li>
-                            <li role="presentation"><a href="#pingshizuoyeNofourth" aria-controls="pingshizuoyeNofourth" role="tab" data-toggle="tab">
-                              <p class="list-group-item-text">第四次</p>
-                              <p class="list-group-item-text">25%</p>
-                            </a></li>
+                            {/if}
+                            {/section}
                           </ul>
                           <!-- Tab panes -->
                           <div class="tab-content">
-                            <div role="tabpanel" class="tab-pane active" id="pingshizuoyeNoFirst">
+                            {section name=zydetail loop=$zyList}
+                            <div role="tabpanel" class="tab-pane active" id="zy{$zyList[zydetail][0]}">
                               <!-- 作业开始 -->
                               <blockquote style="margin-bottom: 20px">
-                                <p>平时作业题目以及详情</p>
+                                <p>作业题目以及详情</p>
                                 <footer>
-                                  {$pszyList[0]}
+                                  {$zyList[zydetail][4]}
                                 </footer>
                               </blockquote>
                               <table class="table table-bordered table-hover table-striped" style="margin-bottom: 20px">
@@ -166,17 +161,33 @@
                                  </thead>
                                  <tbody>
                                    <tr>
-                                     <td>{$pszyList[4]}</td>
+                                     <td>{$zyList[zydetail][5]}</td>
                                      <td>王华华</td>
-                                     <td>{$pszyList[3]}</td>
-                                     <td>{$pszyList[1]}</td>
-                                     <td>{$pszyList[6]}</td>
+                                     <td>{$zyList[zydetail][2]}</td>
+                                     <td>{$zyList[zydetail][3]}</td>
+                                     <td>{$zyList[zydetail][7]}</td>
                                    </tr>
                                  </tbody>
                               </table>
                               <div class="form-group">
                                   <label for="InputFile">上传作业</label>
-                                  <input type="file" id="InputFile">
+                                <div id="uploader{$zyList[zydetail][0]}" class="wu-upload">
+                                  <input type="hidden" value="{$zyList[zydetail][0]}" class="topic-no">
+                                  <input type="hidden" value="{$zyList[zydetail][9]}" class="judge-no">
+                                  <!--用来存放文件信息-->
+                                  <div id="up-list{$zyList[zydetail][0]}" class="uploader-list">
+                                    <a href="./{$zyList[zydetail][10]}">
+                                      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-file"></span> 下载已上传附件</button>
+                                    </a>
+                                  </div>
+                                  <div class="btns">
+                                    <div id="picker{$zyList[zydetail][0]}" class="picker picker-div">选择文件</div>
+                                    <div class="btn-div">
+                                      <button id="startbtn{$zyList[zydetail][0]}" class="btn btn-default stBtn">开始上传</button>
+                                      <button id="delbtn{$zyList[zydetail][0]}" class="btn btn-default delBtn">删除文件</button>
+                                    </div>
+                                  </div>
+                                </div>
                                   <p class="help-block">如若任课老师要求，请将作业上传在此处。未在截至时间之前上传自动视为未提交，文件命名格式（学号+姓名）</p>
                               </div>
                               <hr class="divider">
@@ -191,35 +202,40 @@
                                  </thead>
                                  <tbody>
                                    <tr>
-                                     <td>2012210046</td>
-                                     <td>沈自如</td>
-                                     <td>提交</td>
-                                     <td>6</td>
+                                     <td>{$stu[1]}</td>
+                                     <td>{$stu[0]}</td>
+                                     {if $zyList[zydetail][12]==1}
+                                     <td>已提交</td>
+                                     {else}
+                                     <td>未提交</td>
+                                     {/if}
+                                     <td>{$zyList[zydetail][11]}</td>
                                    </tr>
                                  </tbody>
                               </table>
                               <!-- 作业结束 -->
                             </div>
-                            <div role="tabpanel" class="tab-pane" id="pingshizuoyeNoSecond">...</div>
-                            <div role="tabpanel" class="tab-pane" id="pingshizuoyeNoThird">...</div>
-                            <div role="tabpanel" class="tab-pane" id="pingshizuoyeNofourth">...</div>
+                            {/section}
                           </div>
                         </div>
                       </div>
                       <!-- 平时作业切换结束 -->
-                      <!-- 大作业开始 -->
+                      <!-- 随堂测试开始 -->
                       <div role="tabpanel" class="tab-pane" id="dazuoye">
                         <div>
                           <!-- Nav tabs -->
                           <ul class="nav nav-pills cishugoucheng " role="tablist">
-                            <li role="presentation" class="active"><a href="#dazuoyeNoFirst" aria-controls="dazuoyeNoFirst" role="tab" data-toggle="tab">
-                              <p class="list-group-item-text">第一次</p>
-                              <p class="list-group-item-text">50%</p>
+                            {section name=stzy loop=$stzyList}
+                            {if $smarty.section.loop.index == 0}
+                            <li role="presentation" class="active"><a href="#stzy{$stzyList[stzy][0]}" aria-controls="dazuoyeNoFirst" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第{$smarty.section.loop.index+1}次</p>
                             </a></li>
-                            <li role="presentation"><a href="#dazuoyeNoSecond" aria-controls="dazuoyeNoSecond" role="tab" data-toggle="tab">
-                              <p class="list-group-item-text">第二次</p>
-                              <p class="list-group-item-text">50%</p>
+                            {else}
+                            <li role="presentation"><a href="#stzy{$stzyList[stzy][0]}" aria-controls="dazuoyeNoSecond" role="tab" data-toggle="tab">
+                              <p class="list-group-item-text">第{$smarty.section.loop.index+1}次</p>
                             </a></li>
+                            {/if}
+                            {/section}
                           </ul>
                           <!-- Tab panes -->
                           <div class="tab-content">
@@ -252,12 +268,12 @@
                                  </tbody>
                               </table>
                               <div class="form-group">
-                                  <div id="uploader" class="wu-example">
+                                  <div class="uploader" class="wu-example">
                                       <!--用来存放文件信息-->
-                                      <div id="thelist" class="uploader-list"></div>
+                                      <div class="thelist" class="uploader-list"></div>
                                       <div class="btns">
-                                          <div id="picker">选择文件</div>
-                                          <button id="ctlBtn" class="btn btn-default">开始上传</button>
+                                          <div class="picker">选择文件</div>
+                                          <button class="ctlBtn" class="btn btn-default">开始上传</button>
                                       </div>
                                   </div>
                                   <p class="help-block">如若任课老师要求，请将作业上传在此处。未在截至时间之前上传自动视为未提交，文件命名格式（学号+姓名）</p>

@@ -15,6 +15,7 @@ class Request {
 
     private $request;
 
+    private $file;
     public static function instance() {
         if (self::$instance === null) {
             self::$instance = new Request();
@@ -26,6 +27,7 @@ class Request {
     public function __construct() {
         $this->post = $_POST;
         $this->get = $_GET;
+        $this->file = $_FILES;
         $this->request = $_REQUEST;
     }
 
@@ -39,5 +41,9 @@ class Request {
 
     public function getParam($name, $default = null) {
         return isset($this->request[$name]) ? $this->request[$name] : $default;
+    }
+
+    public function getFile($name, $default = null) {
+        return isset($this->file[$name]) ? $this->file[$name] : $default;
     }
 }

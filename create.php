@@ -13,16 +13,14 @@ if (!Common::teacher()->isLogin()) {
 }
 $request = Common::request();
 $currentTclassNo = $request->getQuery('tclass_no');
-if(!empty($currentTclassNo)) {
-    $currentTclassData = '';
+$tclassList = Common::teacher()->teacherTclassList();
+if(empty($currentTclassNo)) {
+    $currentTclassNo = $tclassList[0][0];
 }
-//Common::assertTeacherLogin();
-//教师授课列表
-$teacherOwnTclassList = Common::teacher()->teacherTclassList();
 $courseExplainDDList = Common::teacher()->getCourseExplainDD();
 $smarty = Common::smarty();
 $smarty->assign('activeTab', 1);
-$smarty->assign('tClassList', $teacherOwnTclassList);
+$smarty->assign('tClassList', $tclassList);
 $smarty->assign('ddList', $courseExplainDDList);
-
+$smarty->assign('currentTclassNo', $currentTclassNo);
 $smarty->display('create.html');
